@@ -7,8 +7,9 @@ namespace ShushuHopPop
         private PlayerInputManager inputManager;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        new void Awake()
         {
+            base.Awake();
             inputManager = GetComponent<PlayerInputManager>();
         }
 

@@ -591,7 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44038d367a2feca4eb0b38592444b490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerMoveTimeout: 1
 --- !u!114 &1438198789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803690b419cde8a45bf3d1b87f88e9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealthPoints: 0
+  healthPoints: 0
+  defaultMoveTimeout: 1
 --- !u!212 &1438198791
 SpriteRenderer:
   m_ObjectHideFlags: 0

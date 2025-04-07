@@ -1,26 +1,29 @@
+using ShushuHopPop;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
-    private GameManager manager;
     private Vector3[] directionVector = new Vector3[]
     {
         Vector3.left, Vector3.right, Vector3.up, Vector3.down
     };
+
+    private GameManager manager;
     private CharacterController characterController;
+    private Player player;
     private float lastStepMoment;
-    [SerializeField]
-    private float PlayerMoveTimeout = 1.0f;
+    private float playerMoveTimeout => player.MoveTimeout;
 
     public float CurrentTime => Time.realtimeSinceStartup;
-    public float CanMoveTimer => 1 - (CurrentTime - lastStepMoment) / PlayerMoveTimeout;
+    public float CanMoveTimer => 1 - (CurrentTime - lastStepMoment) / playerMoveTimeout;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         characterController = GetComponent<CharacterController>();
         lastStepMoment = Time.realtimeSinceStartup;
+        player = GetComponent<Player>();
         manager = gameObject.AddComponent<GameManager>();
     }
 
@@ -32,7 +35,7 @@ public class PlayerMotor : MonoBehaviour
 
     public void PlayerMove(Vector2 direction)
     {
-        if (CanMoveTimer <= 0f)
+        if (direction != Vector2.zero && CanMoveTimer <= 0f)
         {
             characterController.Move(transform.TransformDirection(new Vector3(direction.x, direction.y)));
             lastStepMoment = CurrentTime;
