@@ -7,7 +7,7 @@ public class PlayerInputManager : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput.PlayerActions playerActions;
     private PlayerInput.UIActions uiActions;
-    private PlayerMotor playerMotor;
+    private CharacterMotor playerMotor;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -15,7 +15,7 @@ public class PlayerInputManager : MonoBehaviour
         playerInput = new PlayerInput();
         playerActions = playerInput.Player;
         uiActions = playerInput.UI;
-        playerMotor = GetComponent<PlayerMotor>();
+        playerMotor = GetComponent<CharacterMotor>();
     }
 
     private void OnEnable()

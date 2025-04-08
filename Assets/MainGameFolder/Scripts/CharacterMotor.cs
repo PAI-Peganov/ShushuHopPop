@@ -2,18 +2,18 @@ using ShushuHopPop;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMotor : MonoBehaviour
+public class CharacterMotor : MonoBehaviour
 {
-    private Vector3[] directionVector = new Vector3[]
+    private readonly Vector3[] directionVector = new Vector3[]
     {
         Vector3.left, Vector3.right, Vector3.up, Vector3.down
     };
 
     private GameManager manager;
     private CharacterController characterController;
-    private Player player;
+    private Character character;
     private float lastStepMoment;
-    private float playerMoveTimeout => player.MoveTimeout;
+    private float playerMoveTimeout => character.MoveTimeout;
 
     public float CurrentTime => Time.realtimeSinceStartup;
     public float CanMoveTimer => 1 - (CurrentTime - lastStepMoment) / playerMoveTimeout;
@@ -23,7 +23,7 @@ public class PlayerMotor : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         lastStepMoment = Time.realtimeSinceStartup;
-        player = GetComponent<Player>();
+        character = GetComponent<Character>();
         manager = gameObject.AddComponent<GameManager>();
     }
 
