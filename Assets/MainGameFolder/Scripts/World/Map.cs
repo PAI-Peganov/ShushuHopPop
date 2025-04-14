@@ -1,25 +1,64 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.Tilemaps;
 
-public class MapGenerator : MonoBehaviour
+public class Map : MonoBehaviour
 {
-    public Tilemap tilemap;           // Сюда прикрепляем Tilemap из сцены
-    public TileBase grassTile;        // Тайлы, которые будем ставить
+    public Tilemap[] layers;
+ 
+    public int MapWidth = 24;
+    public int MapHeight = 24;
+    private int LayersCount = 0;
+
+    public CellNode[,,] map;
+
+    // debug метод
+    void GenerateEmptyMap()
+    {
+        map = new CellNode[LayersCount, MapHeight, MapWidth]; 
+        for (int k = 0; k < LayersCount; k++) 
+            for  (int i = 0; i < MapHeight; i++)
+                for (int j = 0; j < MapWidth; j++) 
+                    map[k, i, j] = new CellNode();
+    }
+
+    // debug метод
+    void GenerateRandomMap()
+    {
+        var rnd = new System.Random();
+
+        map = new CellNode[LayersCount, MapHeight, MapWidth];
+        for (int k = 0; k < LayersCount; k++)
+            for (int i = 0; i < MapHeight; i++)
+                for (int j = 0; j < MapWidth; j++)
+                {
+                    map[k, i, j] = new CellNode();
+                    if (rnd.Next(3) == 0)
+                        map[k, i, j].ChangeCellType("isometric_0056");
+                    if (rnd.Next(3) == 0)
+                        map[k, i, j].ChangeCellType("isometric_0057");
+                }
+    }
+
+
 
     void Start()
     {
+        LayersCount = layers.Length;
+        GenerateRandomMap();
         RenderMap();
     }
 
     void RenderMap()
     {
-        for (int x = 0; x < 50; x++)
-        {
-            for (int y = 0; y < 50; y++)
-            {
-                TileBase tile = grassTile;
-                tilemap.SetTile(new Vector3Int(x, y, 0), tile);
-            }
-        }
+        for (int k = 0; k < LayersCount; k++)
+            for (int i = 0; i < MapHeight; i++)
+                for (int j = 0; j < MapWidth; j++)
+                {
+                    // нужно учитывать что-чем выше уровень тем больше он уходит вверх
+                    layers[k].SetTile(new Vector3Int(i + k, j + k, 0), map[k, i, j].CellTile);
+                }
     }
 }
