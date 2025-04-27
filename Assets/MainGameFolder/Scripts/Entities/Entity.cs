@@ -10,8 +10,9 @@ namespace EntityBase
         private int healthPoints; 
         [SerializeField]
         private float defaultMoveTimeout;
+        [SerializeField]
+        public string Id { get; }
 
-        public string id;
         public float MoveTimeout { private set; get; }
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         protected void Awake()

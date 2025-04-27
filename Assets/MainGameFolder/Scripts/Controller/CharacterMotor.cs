@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using EntityBase;
+using System.Linq;
 
 public class CharacterMotor : MonoBehaviour
 {
@@ -27,12 +28,18 @@ public class CharacterMotor : MonoBehaviour
 
     }
 
-    public void PlayerMove(Vector2 direction)
+    public void SetCharacterMove(Vector2 fieldDirection)
     {
-        if (direction != Vector2.zero && CanMoveTimer <= 0f)
+        if (fieldDirection.magnitude > 0.1f && CanMoveTimer <= 0f)
         {
-            characterController.Move(transform.TransformDirection(new Vector3(direction.x, direction.y)));
+            characterController.Move(CalculateMove(fieldDirection));
             lastStepMoment = CurrentTime;
         }
+    }
+
+    private Vector3 CalculateMove(Vector2 fieldDirection)
+    {
+        var worldDirection = WorldManager.HalfCellMoveVectors.OrderBy(v => (v + fieldDirection).magnitude).First();
+        return new Vector3(worldDirection.x, worldDirection.y, 0);
     }
 }

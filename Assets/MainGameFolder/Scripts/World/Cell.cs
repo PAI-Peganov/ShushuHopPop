@@ -14,6 +14,6 @@ public static class Cell
 
     public static bool IsValid(Entity entity, string CellType)
     {
-        return validList[CellType].Contains(entity.id);
+        return validList[CellType].Contains(entity.Id);
     }
 }
