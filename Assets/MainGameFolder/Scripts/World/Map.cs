@@ -10,6 +10,8 @@ public class Map : MonoBehaviour
     private Grid grid;
     [SerializeField]
     private Tilemap[] layers;
+    [SerializeField]
+    private Vector2Int PlayerStart;
  
     public int MapWidth = 24;
     public int MapHeight = 24;
@@ -19,7 +21,9 @@ public class Map : MonoBehaviour
 
     public Vector3 GetGridPositionByGridCords(Vector3Int cords) => grid.GetCellCenterWorld(cords);
 
-    // debug метод
+    public Vector3Int GetPlayerStart => new Vector3Int(PlayerStart.x, PlayerStart.y, 0);
+
+    // debug пїЅпїЅпїЅпїЅпїЅ
     void GenerateEmptyMap()
     {
         map = new CellNode[LayersCount, MapHeight, MapWidth]; 
@@ -29,7 +33,7 @@ public class Map : MonoBehaviour
                     map[k, i, j] = new CellNode();
     }
 
-    // debug метод
+    // debug пїЅпїЅпїЅпїЅпїЅ
     void GenerateRandomMap()
     {
         var rnd = new System.Random();
@@ -47,14 +51,16 @@ public class Map : MonoBehaviour
                 }
     }
 
-
+    void Awake()
+    {
+        WorldManager.AddNewMap(this);
+    }
 
     void Start()
     {
         LayersCount = layers.Length;
         GenerateRandomMap();
         RenderMap();
-        WorldManager.AddNewMap(this);
     }
 
     void RenderMap()
@@ -63,7 +69,7 @@ public class Map : MonoBehaviour
             for (var i = 0; i < MapHeight; i++)
                 for (var j = 0; j < MapWidth; j++)
                 {
-                    // нужно учитывать что-чем выше уровень тем больше он уходит вверх
+                    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
                     layers[k].SetTile(new Vector3Int(i + k, j + k, 0), map[k, i, j].CellTile);
                 }
     }

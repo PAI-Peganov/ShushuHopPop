@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput.PlayerActions playerActions;
     private CharacterMotor playerMotor;
-    private float stickSin = Mathf.Sin(-45);
-    private float stickCos = Mathf.Cos(-45);
+    private float SinWASD = Mathf.Sin(-45);
+    private float CosWASD = Mathf.Cos(-45);
 
     void Awake()
     {
@@ -30,16 +30,16 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        playerMotor.SetCharacterMove(playerActions.MoveWASD.ReadValue<Vector2>());
+        playerMotor.SetCharacterMove(playerActions.MoveGS.ReadValue<Vector2>());
         playerMotor.SetCharacterMove(
-            ConvertStickContrllerDirection(
-                playerActions.MoveGS.ReadValue<Vector2>()));
+            ConvertWASDContrllerDirection(
+                playerActions.MoveWASD.ReadValue<Vector2>()));
     }
 
-    private Vector2 ConvertStickContrllerDirection(Vector2 direction)
+    private Vector2 ConvertWASDContrllerDirection(Vector2 direction)
     {
-        float x = direction.x * stickCos - direction.y * stickSin;
-        float y = direction.x * stickSin + direction.y * stickCos;
+        float x = direction.x * CosWASD - direction.y * SinWASD;
+        float y = direction.x * SinWASD + direction.y * CosWASD;
         return new Vector2(x, y);
     }
 }
