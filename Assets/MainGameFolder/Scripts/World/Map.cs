@@ -34,9 +34,9 @@ public class Map : MonoBehaviour
 
     void Start()
     {
-        LayersCount = layers.Length;
-        GenerateRandomMap();
-        RenderMap();
+        //LayersCount = layers.Length;
+        //GenerateRandomMap();
+        //RenderMap();
     }
 
     void RenderMap()
