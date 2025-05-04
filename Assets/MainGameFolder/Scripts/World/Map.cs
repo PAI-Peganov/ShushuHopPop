@@ -11,6 +11,8 @@ public class Map : MonoBehaviour
     [SerializeField]
     private Tilemap[] layers;
     [SerializeField]
+    private Tilemap[] structsLayers;
+    [SerializeField]
     private Vector2Int PlayerStart;
  
     public int MapWidth = 24;
@@ -21,35 +23,9 @@ public class Map : MonoBehaviour
 
     public Vector3 GetGridPositionByGridCords(Vector3Int cords) => grid.GetCellCenterWorld(cords);
 
+    public Vector3 ClarifyPosition(Vector3 position) => grid.GetCellCenterWorld(grid.WorldToCell(position));
+
     public Vector3Int GetPlayerStart => new Vector3Int(PlayerStart.x, PlayerStart.y, 0);
-
-    // debug �����
-    void GenerateEmptyMap()
-    {
-        map = new CellNode[LayersCount, MapHeight, MapWidth]; 
-        for (var k = 0; k < LayersCount; k++) 
-            for (var i = 0; i < MapHeight; i++)
-                for (var j = 0; j < MapWidth; j++) 
-                    map[k, i, j] = new CellNode();
-    }
-
-    // debug �����
-    void GenerateRandomMap()
-    {
-        var rnd = new System.Random();
-
-        map = new CellNode[LayersCount, MapHeight, MapWidth];
-        for (var k = 0; k < LayersCount; k++)
-            for (var i = 0; i < MapHeight; i++)
-                for (var j = 0; j < MapWidth; j++)
-                {
-                    map[k, i, j] = new CellNode();
-                    if (rnd.Next(3) == 0)
-                        map[k, i, j].ChangeCellType("isometric_0056");
-                    if (rnd.Next(3) == 0)
-                        map[k, i, j].ChangeCellType("isometric_0057");
-                }
-    }
 
     void Awake()
     {
@@ -70,7 +46,35 @@ public class Map : MonoBehaviour
                 for (var j = 0; j < MapWidth; j++)
                 {
                     // ����� ��������� ���-��� ���� ������� ��� ������ �� ������ �����
-                    layers[k].SetTile(new Vector3Int(i + k, j + k, 0), map[k, i, j].CellTile);
+                    layers[k].SetTile(new Vector3Int(i + k, j + k, k), map[k, i, j].CellTile);
+                }
+    }
+
+    // debug �����
+    void GenerateEmptyMap()
+    {
+        map = new CellNode[LayersCount, MapHeight, MapWidth];
+        for (var k = 0; k < LayersCount; k++)
+            for (var i = 0; i < MapHeight; i++)
+                for (var j = 0; j < MapWidth; j++)
+                    map[k, i, j] = new CellNode();
+    }
+
+    // debug �����
+    void GenerateRandomMap()
+    {
+        var rnd = new System.Random();
+
+        map = new CellNode[LayersCount, MapHeight, MapWidth];
+        for (var k = 0; k < LayersCount; k++)
+            for (var i = 0; i < MapHeight; i++)
+                for (var j = 0; j < MapWidth; j++)
+                {
+                    map[k, i, j] = new CellNode();
+                    if (rnd.Next(3) == 0)
+                        map[k, i, j].ChangeCellType("isometric_0056");
+                    if (rnd.Next(3) == 0)
+                        map[k, i, j].ChangeCellType("isometric_0057");
                 }
     }
 }

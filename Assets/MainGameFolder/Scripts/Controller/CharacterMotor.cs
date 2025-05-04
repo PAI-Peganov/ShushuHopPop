@@ -54,21 +54,20 @@ public class CharacterMotor : MonoBehaviour
     {
         if (!character.IsMoving)
             return;
-        characterController.Move(Vector3.MoveTowards(characterController.transform.position,
-                                                     aimMovePosition,
-                                                     entityMoveSpeed * Time.deltaTime)
-                                 - characterController.transform.position);
+        characterController.transform.position = Vector3.MoveTowards(characterController.transform.position,
+                                                                     aimMovePosition,
+                                                                     entityMoveSpeed * Time.deltaTime);
         TryChooseNextMove();
     }
 
     private void TryChooseNextMove()
     {
-        if ((characterController.transform.position - aimMovePosition).magnitude == 0f)
+        if (Vector3.Distance(characterController.transform.position, aimMovePosition) == 0f)
         {
             if (isMovingToGridline)
             {
                 isMovingToGridline = false;
-                var targetCellCenter = 2f * aimMovePosition - startMovePosition;
+                var targetCellCenter = WorldManager.ClarifyPosition(2f * aimMovePosition - startMovePosition);
                 isMovingToNextCell = WorldManager.IsCellAvailableForPlayer(targetCellCenter);
                 if (isMovingToNextCell)
                     (aimMovePosition, startMovePosition) = (targetCellCenter, aimMovePosition);
@@ -88,7 +87,7 @@ public class CharacterMotor : MonoBehaviour
     private Vector3 CalculateMove(Vector2 controllerDirection)
     {
         var worldDirection = WorldManager.HalfCellMoveVectors
-            .OrderByDescending(v => (v + controllerDirection).magnitude)
+            .OrderBy(v => Vector3.Distance(v, controllerDirection))
             .First();
         return new Vector3(worldDirection.x, worldDirection.y, 0);
     }

@@ -36,6 +36,8 @@ public static class WorldManager
         return true;
     }
 
+    public static Vector3 ClarifyPosition(Vector3 position) => Map.ClarifyPosition(position);
+
     public static void UpdatePlayerLocation(Vector3 closePositionOfPlayer)
     {
 
