@@ -11,9 +11,6 @@ public class IsoSorting : MonoBehaviour
 
     void LateUpdate()
     {
-        void LateUpdate()
-        {
-            spriteRenderer.sortingOrder = Mathf.RoundToInt(-(transform.position.y) * 100);
-        }
+        //spriteRenderer.sortingOrder = Mathf.RoundToInt(-(transform.position.y) * 100);
     }
 }
