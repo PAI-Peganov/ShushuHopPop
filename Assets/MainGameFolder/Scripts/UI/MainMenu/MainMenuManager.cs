@@ -21,18 +21,19 @@ namespace MainGameFolder.Scripts.UI.MainMenu
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
+        //TODO:
         // Enables settings scene
-        public void Settings()
-        {
-            menu.enabled = false;
-            settingsMenu.enabled = true;
-        }
-
-        public void QuitSettings()
-        {
-            settingsMenu.enabled = false;
-            menu.enabled = true;
-        }
+        // public void Settings()
+        // {
+        //     menu.enabled = false;
+        //     settingsMenu.enabled = true;
+        // }
+        //
+        // public void QuitSettings()
+        // {
+        //     settingsMenu.enabled = false;
+        //     menu.enabled = true;
+        // }
 
         // Exists from game
         public void Exit()
