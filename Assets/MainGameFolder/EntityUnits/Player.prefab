@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5236083948196191113}
   - component: {fileID: 3792604293394855497}
   - component: {fileID: 4805390617152766122}
+  - component: {fileID: 8833570804672348745}
+  - component: {fileID: 892651835994606458}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -82,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -7268512133553459934, guid: e50f05ce331a3b04f80a9253f3be51a6, type: 3}
+  m_Sprite: {fileID: -1868848885, guid: 3f282abe5b485d84db4dbd17356f4373, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.62, y: 1.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -173,6 +175,50 @@ MonoBehaviour:
   movingOffset: 0.7
   cameraSpeed: 1
   playerCamera: {fileID: 6740464907168950575}
+--- !u!95 &8833570804672348745
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6609779317053473571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 258e8ecf27ec0394a880e58dee7ffc9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &892651835994606458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6609779317053473571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5c751136c044e4c8eccd068f2a168d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimatedSpritesWalk:
+  - {fileID: 7400000, guid: 4ec26290fa829c345ab334e454027a5a, type: 2}
+  - {fileID: 7400000, guid: a1b370dd104a84f40a04df611111603a, type: 2}
+  - {fileID: 7400000, guid: 3de254d35bc7e494799b8edfa30cf0da, type: 2}
+  - {fileID: 7400000, guid: c0a241d25a3247341a730347b292aa30, type: 2}
+  AnimatedSpritesStand:
+  - {fileID: 7400000, guid: 9525eef863bd29148841884eb1fa81d7, type: 2}
+  - {fileID: 7400000, guid: d2308e366b20a234daf99bbe56aea3c8, type: 2}
+  - {fileID: 7400000, guid: 1a4fd28c17c8dd44da41c01e3c61751e, type: 2}
+  - {fileID: 7400000, guid: 4906daf3aac5c304e8a6ace7b858770f, type: 2}
 --- !u!1 &9116172002658419218
 GameObject:
   m_ObjectHideFlags: 0

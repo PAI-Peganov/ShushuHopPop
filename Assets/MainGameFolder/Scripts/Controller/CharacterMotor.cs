@@ -8,6 +8,7 @@ public class CharacterMotor : MonoBehaviour
 {
     private CharacterController characterController;
     private Entity character;
+    private AnimationsSwitcher animationsSwitcher;
     private float lastStepMoment;
     private float entityMoveTimeout => character.MoveTimeout;
     private float entityMoveSpeed => character.MoveSpeed;
@@ -25,6 +26,7 @@ public class CharacterMotor : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         lastStepMoment = Time.realtimeSinceStartup;
         character = GetComponent<Entity>();
+        animationsSwitcher = GetComponent<AnimationsSwitcher>();
     }
 
     void Start()
@@ -44,9 +46,11 @@ public class CharacterMotor : MonoBehaviour
         if (controllerDirection.magnitude > 0.1f && CanMoveTimer <= 0f)
         {
             startMovePosition = characterController.transform.position;
-            aimMovePosition = startMovePosition + CalculateMove(controllerDirection);
+            var calculatedDirection = CalculateMove(controllerDirection);
+            aimMovePosition = startMovePosition + calculatedDirection;
             character.IsMoving = true;
             isMovingToGridline = true;
+            animationsSwitcher.SetSpriteWalkingByDirection(new Vector2(calculatedDirection.x, calculatedDirection.y));
         }
     }
 
@@ -78,6 +82,7 @@ public class CharacterMotor : MonoBehaviour
             else
             {
                 character.IsMoving = false;
+                animationsSwitcher.SetSpriteStanding();
                 if (isMovingToNextCell)
                     lastStepMoment = CurrentTime;
             }
