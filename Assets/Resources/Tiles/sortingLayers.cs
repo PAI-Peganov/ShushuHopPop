@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class IsoSorting : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    private Renderer _renderer;
 
-    void Awake()
+    void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _renderer = GetComponent<Renderer>();
+        if (_renderer == null)
+        {
+            Debug.LogError("Renderer not found on " + gameObject.name);
+        }
     }
 
     void LateUpdate()
     {
-        //spriteRenderer.sortingOrder = Mathf.RoundToInt(-(transform.position.y) * 100);
+        if (_renderer != null)
+        {
+            _renderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+        }
     }
 }
+    
