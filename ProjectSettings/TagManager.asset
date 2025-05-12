@@ -62,5 +62,8 @@ TagManager:
   - name: UpperDecorations
     uniqueID: 2326989845
     locked: 0
+  - name: Menu
+    uniqueID: 2043730013
+    locked: 0
   m_RenderingLayers:
   - Default
