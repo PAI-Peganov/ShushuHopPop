@@ -1,13 +1,18 @@
 using NUnit.Framework;
 using System.Linq;
 using UnityEngine;
+using EntityBase;
 
 public class AnimationsSwitcher : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private Entity entity;
     private AnimationClip nextStanding;
+    [SerializeField]
+    private float movingAnimationSpeed;
+    [SerializeField]
+    private float standingAnimationSpeed;
     [SerializeField]
     private AnimationClip[] AnimatedSpritesWalk;
     [SerializeField]
@@ -15,7 +20,7 @@ public class AnimationsSwitcher : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        entity = GetComponent<Entity>();
     }
 
     public void SetSpriteWalkingByDirection(Vector2 direction)
@@ -27,11 +32,13 @@ public class AnimationsSwitcher : MonoBehaviour
             .Last()
             .sprites;
         animator.Play(sprites.Walk.name);
+        animator.speed = movingAnimationSpeed * entity.MoveSpeed;
         nextStanding = sprites.Stand;
     }
 
     public void SetSpriteStanding()
     {
         animator.Play(nextStanding.name);
+        animator.speed = standingAnimationSpeed;
     }
 }

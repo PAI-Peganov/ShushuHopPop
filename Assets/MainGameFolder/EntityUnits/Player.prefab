@@ -382,10 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1cb4dc547b4d8f418c329403ca35e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 0
-  healthPoints: 0
+  maxHealthPoints: 100
+  healthPoints: 100
   defaultMoveTimeout: 0.05
-  defaultMoveSpeed: 3
+  defaultMoveSpeed: 1
 --- !u!143 &8447594163406093021
 CharacterController:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingOffset: 0.7
-  cameraSpeed: 1
+  cameraSpeed: 0.6
   playerCamera: {fileID: 3578380994333270345}
 --- !u!114 &5477825223789380728
 MonoBehaviour:
@@ -450,6 +450,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5c751136c044e4c8eccd068f2a168d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingAnimationSpeed: 0.3
+  standingAnimationSpeed: 0.3
   AnimatedSpritesWalk:
   - {fileID: 7400000, guid: 4ec26290fa829c345ab334e454027a5a, type: 2}
   - {fileID: 7400000, guid: a1b370dd104a84f40a04df611111603a, type: 2}

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using EntityBase;
 
 public static class WorldManager
 {
@@ -30,16 +31,13 @@ public static class WorldManager
         };
     }
 
-    public static bool IsCellAvailableForPlayer(Vector3 closePositionOfTargetCell)
-    {
-        //TODO: ����������
-        return true;
-    }
+    public static bool IsCellAvailableForEntity(Entity entity, Vector3 closePositionOfTargetCell) =>
+        Map.IsCellAcceptedForMove(entity, Map.GetGridCordsByGridPosition(closePositionOfTargetCell));
 
     public static Vector3 ClarifyPosition(Vector3 position) => Map.ClarifyPosition(position);
 
     public static void UpdatePlayerLocation(Vector3 closePositionOfPlayer)
     {
-
+        
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using EntityBase;
 using System.Linq;
+using System.Collections;
+using System;
 
 public class CharacterMotor : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class CharacterMotor : MonoBehaviour
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        lastStepMoment = Time.realtimeSinceStartup;
+        lastStepMoment = 0f;
         character = GetComponent<Entity>();
         animationsSwitcher = GetComponent<AnimationsSwitcher>();
     }
@@ -54,6 +56,12 @@ public class CharacterMotor : MonoBehaviour
         }
     }
 
+    private IEnumerator CorotineEnumerator(float delay, Action action)
+    {
+        yield return new WaitForSeconds(delay);
+        action();
+    }
+
     private void TryMoveCharacter()
     {
         if (!character.IsMoving)
@@ -72,17 +80,25 @@ public class CharacterMotor : MonoBehaviour
             {
                 isMovingToGridline = false;
                 var targetCellCenter = WorldManager.ClarifyPosition(2f * aimMovePosition - startMovePosition);
-                isMovingToNextCell = WorldManager.IsCellAvailableForPlayer(targetCellCenter);
+                isMovingToNextCell = WorldManager.IsCellAvailableForEntity(character, targetCellCenter);
                 if (isMovingToNextCell)
                     (aimMovePosition, startMovePosition) = (targetCellCenter, aimMovePosition);
                 else
+                {
                     (aimMovePosition, startMovePosition) = (startMovePosition, aimMovePosition);
+                    animationsSwitcher.SetSpriteWalkingByDirection(new Vector2(
+                        (aimMovePosition - startMovePosition).x,
+                        (aimMovePosition - startMovePosition).y));
+                }
                 WorldManager.UpdatePlayerLocation(aimMovePosition);
             }
             else
             {
                 character.IsMoving = false;
-                animationsSwitcher.SetSpriteStanding();
+                StartCoroutine(CorotineEnumerator(0.15f, () => {
+                    if (!character.IsMoving)
+                        animationsSwitcher.SetSpriteStanding();
+                }));
                 if (isMovingToNextCell)
                     lastStepMoment = CurrentTime;
             }
