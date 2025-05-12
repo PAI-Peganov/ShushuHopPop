@@ -17834,18 +17834,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2554397498146896436, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2554397498146896436, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -639357635
-      objectReference: {fileID: 0}
-    - target: {fileID: 2585169154108864085, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3032518547708327219, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17890,67 +17878,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[0]'
-      value: -181836541
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[1]'
-      value: 1177002573
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[2]'
-      value: 61219409
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[3]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[4]'
-      value: -213555431
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[5]'
-      value: -639357635
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579661655115107184, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[6]'
-      value: -1967977451
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4237227657343176292}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
---- !u!1 &4237227657343176291 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-  m_PrefabInstance: {fileID: 4237227657343176290}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4237227657343176292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4237227657343176291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb3ea8d18e71c1445932558901cccc50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5193477885581656222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18425,34 +18357,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[0]'
-      value: -181836541
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[1]'
-      value: 1177002573
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[2]'
-      value: 61219409
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[4]'
-      value: -213555431
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[5]'
-      value: -639357635
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539846362609420384, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[6]'
-      value: -1967977451
-      objectReference: {fileID: 0}
     - target: {fileID: 4753936108317499531, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18496,10 +18400,6 @@ PrefabInstance:
     - target: {fileID: 6275732496379554844, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
       propertyPath: m_Name
       value: Global Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 6275732496379554844, guid: 3faf0cc38f89b4a49a3e7a71406b675b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
