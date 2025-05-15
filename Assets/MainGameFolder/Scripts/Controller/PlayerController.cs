@@ -5,9 +5,11 @@ using static UnityEditor.PlayerSettings;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    private bool isCellDependent;
     private PlayerInput playerInput;
     private PlayerInput.PlayerActions playerActions;
-    private CharacterMotor playerMotor;
+    private ICharacterMotor playerMotor;
     private float SinWASD = Mathf.Sin(-45);
     private float CosWASD = Mathf.Cos(-45);
 
@@ -15,7 +17,10 @@ public class PlayerController : MonoBehaviour
     {
         playerInput = new PlayerInput();
         playerActions = playerInput.Player;
-        playerMotor = GetComponent<CharacterMotor>();
+        if (isCellDependent)
+            playerMotor = GetComponent<CharacterMotorCellDependent>();
+        else
+            playerMotor = GetComponent<CharacterMotorIndependent>();
     }
 
     private void OnEnable()
@@ -31,15 +36,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         playerMotor.SetCharacterMove(playerActions.MoveGS.ReadValue<Vector2>());
-        playerMotor.SetCharacterMove(
-            ConvertWASDContrllerDirection(
-                playerActions.MoveWASD.ReadValue<Vector2>()));
-    }
-
-    private Vector2 ConvertWASDContrllerDirection(Vector2 direction)
-    {
-        float x = direction.x * CosWASD - direction.y * SinWASD;
-        float y = direction.x * SinWASD + direction.y * CosWASD;
-        return new Vector2(x, y);
+        playerMotor.SetCharacterMove(playerActions.MoveWASD.ReadValue<Vector2>());
     }
 }

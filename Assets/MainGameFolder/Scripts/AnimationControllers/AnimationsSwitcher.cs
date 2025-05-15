@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Linq;
 using UnityEngine;
 using EntityBase;
+using System.Collections.Generic;
 
 public class AnimationsSwitcher : MonoBehaviour
 {
@@ -17,18 +18,36 @@ public class AnimationsSwitcher : MonoBehaviour
     private AnimationClip[] AnimatedSpritesWalk;
     [SerializeField]
     private AnimationClip[] AnimatedSpritesStand;
+    private Vector2[] eightDirections = new Vector2[]
+    {
+        new (0.71f, 0.71f),
+        new (0.71f, -0.71f),
+        new (-0.71f, -0.71f),
+        new (-0.71f, 0.71f),
+        new (1, 0),
+        new (0, -1),
+        new (-1, 0),
+        new (0, 1)
+    };
+
     void Awake()
     {
         animator = GetComponent<Animator>();
         entity = GetComponent<Entity>();
     }
 
-    public void SetSpriteWalkingByDirection(Vector2 direction)
+    public void SetSpriteWalkingByEightDirections(Vector2 moveDirection) =>
+        SetSpriteWalkingByDirections(eightDirections, moveDirection);
+
+    public void SetSpriteWalkingByCellDirections(Vector2 moveDirection) =>
+        SetSpriteWalkingByDirections(WorldManager.HalfCellMoveVectors, moveDirection);
+
+    private void SetSpriteWalkingByDirections(IEnumerable<Vector2> directions, Vector2 moveDirection)
     {
-        var sprites = WorldManager.HalfCellMoveVectors.Zip(
+        var sprites = directions.Zip(
             AnimatedSpritesWalk.Zip(AnimatedSpritesStand, (Walk, Stand) => (Walk, Stand)),
             (vector, sprites) => (vector, sprites))
-            .OrderBy(x => (x.vector + direction).magnitude)
+            .OrderBy(x => (x.vector + moveDirection).magnitude)
             .Last()
             .sprites;
         animator.Play(sprites.Walk.name);

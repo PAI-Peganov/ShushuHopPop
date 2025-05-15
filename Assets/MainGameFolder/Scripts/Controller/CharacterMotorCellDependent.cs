@@ -6,7 +6,7 @@ using System.Linq;
 using System.Collections;
 using System;
 
-public class CharacterMotor : MonoBehaviour
+public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
 {
     private CharacterController characterController;
     private Entity character;
@@ -45,14 +45,16 @@ public class CharacterMotor : MonoBehaviour
 
     public void SetCharacterMove(Vector2 controllerDirection)
     {
-        if (controllerDirection.magnitude > 0.1f && CanMoveTimer <= 0f)
+        if (controllerDirection.x > 0.1f &&
+            controllerDirection.y > 0.1f &&
+            CanMoveTimer <= 0f)
         {
             startMovePosition = characterController.transform.position;
             var calculatedDirection = CalculateMove(controllerDirection);
             aimMovePosition = startMovePosition + calculatedDirection;
             character.IsMoving = true;
             isMovingToGridline = true;
-            animationsSwitcher.SetSpriteWalkingByDirection(new Vector2(calculatedDirection.x, calculatedDirection.y));
+            animationsSwitcher.SetSpriteWalkingByCellDirections(new Vector2(calculatedDirection.x, calculatedDirection.y));
         }
     }
 
@@ -86,7 +88,7 @@ public class CharacterMotor : MonoBehaviour
                 else
                 {
                     (aimMovePosition, startMovePosition) = (startMovePosition, aimMovePosition);
-                    animationsSwitcher.SetSpriteWalkingByDirection(new Vector2(
+                    animationsSwitcher.SetSpriteWalkingByCellDirections(new Vector2(
                         (aimMovePosition - startMovePosition).x,
                         (aimMovePosition - startMovePosition).y));
                 }
@@ -95,7 +97,7 @@ public class CharacterMotor : MonoBehaviour
             else
             {
                 character.IsMoving = false;
-                StartCoroutine(CorotineEnumerator(0.15f, () => {
+                StartCoroutine(CorotineEnumerator(0.1f, () => {
                     if (!character.IsMoving)
                         animationsSwitcher.SetSpriteStanding();
                 }));
