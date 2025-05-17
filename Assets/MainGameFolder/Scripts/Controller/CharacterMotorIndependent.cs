@@ -58,10 +58,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
             }
             startMovePosition = characterController.transform.position;
             aimMovePosition = startMovePosition + moveDirection;
-            if (!character.IsMoving)
-            {
-                character.IsMoving = true;
-            }
+            character.IsMoving = true;
         }
         else if (character.IsMoving)
         {

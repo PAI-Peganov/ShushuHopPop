@@ -36,13 +36,13 @@ public class AnimationsSwitcher : MonoBehaviour
         entity = GetComponent<Entity>();
     }
 
-    public void SetSpriteWalkingByEightDirections(Vector2 moveDirection) =>
-        SetSpriteWalkingByDirections(eightDirections, moveDirection);
+    public void SetSpriteWalkingByEightDirections(Vector2 moveDirection, bool hard=false) =>
+        SetSpriteWalkingByDirections(eightDirections, moveDirection, hard);
 
-    public void SetSpriteWalkingByCellDirections(Vector2 moveDirection) =>
-        SetSpriteWalkingByDirections(WorldManager.HalfCellMoveVectors, moveDirection);
+    public void SetSpriteWalkingByCellDirections(Vector2 moveDirection, bool hard=false) =>
+        SetSpriteWalkingByDirections(WorldManager.HalfCellMoveVectors, moveDirection, hard);
 
-    private void SetSpriteWalkingByDirections(IEnumerable<Vector2> directions, Vector2 moveDirection)
+    private void SetSpriteWalkingByDirections(IEnumerable<Vector2> directions, Vector2 moveDirection, bool hard)
     {
         var sprites = directions.Zip(
             AnimatedSpritesWalk.Zip(AnimatedSpritesStand, (Walk, Stand) => (Walk, Stand)),
@@ -50,9 +50,12 @@ public class AnimationsSwitcher : MonoBehaviour
             .OrderBy(x => (x.vector + moveDirection).magnitude)
             .Last()
             .sprites;
-        animator.Play(sprites.Walk.name);
-        animator.speed = movingAnimationSpeed * entity.MoveSpeed;
-        nextStanding = sprites.Stand;
+        if (hard || animator.GetCurrentAnimatorClipInfo(0).First().clip == sprites.Walk)
+        {
+            animator.Play(sprites.Walk.name);
+            animator.speed = movingAnimationSpeed * entity.MoveSpeed;
+            nextStanding = sprites.Stand;
+        }
     }
 
     public void SetSpriteStanding()
