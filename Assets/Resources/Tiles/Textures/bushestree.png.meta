@@ -1,0 +1,1807 @@
+fileFormatVersion: 2
+guid: 2169e89d9f07f30449e108894883cb27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 763194697099742008
+    second: bushestree_0
+  - first:
+      213: 9028186534741208807
+    second: bushestree_1
+  - first:
+      213: -7605158563673218013
+    second: bushestree_2
+  - first:
+      213: 6639606835188379278
+    second: bushestree_3
+  - first:
+      213: -6349958699781430465
+    second: bushestree_4
+  - first:
+      213: -7698412014443926478
+    second: bushestree_5
+  - first:
+      213: -2927260482679189581
+    second: bushestree_6
+  - first:
+      213: -8758031400951761887
+    second: bushestree_7
+  - first:
+      213: -1962246079677148268
+    second: bushestree_8
+  - first:
+      213: -1410763567089489702
+    second: bushestree_9
+  - first:
+      213: 7302023987031911391
+    second: bushestree_10
+  - first:
+      213: -7609075106538697773
+    second: bushestree_11
+  - first:
+      213: 9034252092404416299
+    second: bushestree_12
+  - first:
+      213: 3850809570237668470
+    second: bushestree_13
+  - first:
+      213: 2396893367185479802
+    second: bushestree_14
+  - first:
+      213: 5570614199198358631
+    second: bushestree_15
+  - first:
+      213: 7918680409277356953
+    second: bushestree_16
+  - first:
+      213: -3151106853560171599
+    second: bushestree_17
+  - first:
+      213: 1403505548055121954
+    second: bushestree_18
+  - first:
+      213: 1236120678225662747
+    second: bushestree_19
+  - first:
+      213: 3533987247554144308
+    second: bushestree_20
+  - first:
+      213: 1967366863805286911
+    second: bushestree_21
+  - first:
+      213: 2458420690564053391
+    second: bushestree_22
+  - first:
+      213: -8759597803110191325
+    second: bushestree_23
+  - first:
+      213: -2564062568981515435
+    second: bushestree_24
+  - first:
+      213: 9155014443471853116
+    second: bushestree_25
+  - first:
+      213: -7799214856860759304
+    second: bushestree_26
+  - first:
+      213: -8490577469769630299
+    second: bushestree_27
+  - first:
+      213: 5006448431436441690
+    second: bushestree_28
+  - first:
+      213: 6930818540561430329
+    second: bushestree_29
+  - first:
+      213: 2043259871089377587
+    second: bushestree_30
+  - first:
+      213: -3046999956709996703
+    second: bushestree_31
+  - first:
+      213: -2971317216518368624
+    second: bushestree_32
+  - first:
+      213: 565535884481630915
+    second: bushestree_33
+  - first:
+      213: 1567282973024972763
+    second: bushestree_34
+  - first:
+      213: -6726626253731601313
+    second: bushestree_35
+  - first:
+      213: 5781087981274141223
+    second: bushestree_36
+  - first:
+      213: -8112892393905511455
+    second: bushestree_37
+  - first:
+      213: 2385347778245839967
+    second: bushestree_38
+  - first:
+      213: -4865047560772135084
+    second: bushestree_39
+  - first:
+      213: 5523138186186927474
+    second: bushestree_40
+  - first:
+      213: -3391624855687838977
+    second: bushestree_41
+  - first:
+      213: 6541675121900951714
+    second: bushestree_42
+  - first:
+      213: 4176771506412481710
+    second: bushestree_43
+  - first:
+      213: 8647165601496617053
+    second: bushestree_44
+  - first:
+      213: -8007652967320235245
+    second: bushestree_45
+  - first:
+      213: -8105065416783338921
+    second: bushestree_46
+  - first:
+      213: 1090614691124462995
+    second: bushestree_47
+  - first:
+      213: 2957253519049315520
+    second: bushestree_48
+  - first:
+      213: 8600189284712710656
+    second: bushestree_49
+  - first:
+      213: -7195683432565401362
+    second: bushestree_50
+  - first:
+      213: -7609897761389589368
+    second: bushestree_51
+  - first:
+      213: 1112282811129109644
+    second: bushestree_52
+  - first:
+      213: 8677028464401091681
+    second: bushestree_53
+  - first:
+      213: 3969978799730969344
+    second: bushestree_54
+  - first:
+      213: -6038713769258941328
+    second: bushestree_55
+  - first:
+      213: -7661125646040939194
+    second: bushestree_56
+  - first:
+      213: 5395131334580745452
+    second: bushestree_57
+  - first:
+      213: 6742602865561840139
+    second: bushestree_58
+  - first:
+      213: 2284700794040120538
+    second: bushestree_59
+  - first:
+      213: 782018433862929355
+    second: bushestree_60
+  - first:
+      213: 8120857573891697364
+    second: bushestree_61
+  - first:
+      213: 4594132231690532904
+    second: bushestree_62
+  - first:
+      213: -2230293695861882526
+    second: bushestree_63
+  - first:
+      213: -5075381232353852942
+    second: bushestree_64
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bushestree_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 320
+        width: 93
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b871f8889679a00800000000000000
+      internalID: 763194697099742008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 328
+        width: 85
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eee639e1df8a4d70800000000000000
+      internalID: 9028186534741208807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 320
+        width: 92
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324ecb7849c057690800000000000000
+      internalID: -7605158563673218013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 322
+        width: 91
+        height: 99
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ea8ab0d3f942c50800000000000000
+      internalID: 6639606835188379278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_4
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 329
+        width: 85
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f336021c43a60e7a0800000000000000
+      internalID: -6349958699781430465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 283
+        width: 41
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c68709f0fb92590800000000000000
+      internalID: -7698412014443926478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_6
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 285
+        width: 44
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf4edca9184067d0800000000000000
+      internalID: -2927260482679189581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_7
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 278
+        width: 39
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124bd86c7d8357680800000000000000
+      internalID: -8758031400951761887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_8
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 285
+        width: 41
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493d0f24693b4c4e0800000000000000
+      internalID: -1962246079677148268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_9
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 287
+        width: 44
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad86191a206fb6ce0800000000000000
+      internalID: -1410763567089489702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 246
+        width: 58
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb2b60e020065560800000000000000
+      internalID: 7302023987031911391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_11
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 248
+        width: 38
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db4e755182276690800000000000000
+      internalID: -7609075106538697773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 242
+        width: 58
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f381b996c106d70800000000000000
+      internalID: 9034252092404416299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_13
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 248
+        width: 58
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cd0b3d6e2d07530800000000000000
+      internalID: 3850809570237668470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_14
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 250
+        width: 38
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78949371d9734120800000000000000
+      internalID: 2396893367185479802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 203
+        width: 56
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76c17fb891cce4d40800000000000000
+      internalID: 5570614199198358631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 206
+        width: 55
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b52d490edc4ed60800000000000000
+      internalID: 7918680409277356953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 206
+        width: 62
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b34f3013050544d0800000000000000
+      internalID: -3151106853560171599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_18
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 205
+        width: 56
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2209d102cd04a7310800000000000000
+      internalID: 1403505548055121954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_19
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 208
+        width: 55
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13d7252535972110800000000000000
+      internalID: 1236120678225662747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_20
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 129
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438a9338dae3b0130800000000000000
+      internalID: 3533987247554144308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_21
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 129
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff90df33dbd7d4b10800000000000000
+      internalID: 1967366863805286911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_22
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 130
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f897a81c7901e1220800000000000000
+      internalID: 2458420690564053391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_23
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 135
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f235a5538af6680800000000000000
+      internalID: -8759597803110191325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_24
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 135
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5533bf1bdae9a6cd0800000000000000
+      internalID: -2564062568981515435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 135
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36d5b881252d0f70800000000000000
+      internalID: 9155014443471853116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_26
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 134
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa8dd1e86f93c390800000000000000
+      internalID: -7799214856860759304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 134
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad3278b6c86b2a80800000000000000
+      internalID: -8490577469769630299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_28
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 134
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58a416b25a7a7540800000000000000
+      internalID: 5006448431436441690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_29
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 132
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937fad8ddb63f2060800000000000000
+      internalID: 6930818540561430329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_30
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 132
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331c710f60e1b5c10800000000000000
+      internalID: 2043259871089377587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_31
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 133
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1678baddea1e6b5d0800000000000000
+      internalID: -3046999956709996703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 138
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0929b6afbb2c3c6d0800000000000000
+      internalID: -2971317216518368624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 138
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2934ef3ef29d700800000000000000
+      internalID: 565535884481630915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_34
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 138
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdfeba56f8b10c510800000000000000
+      internalID: 1567282973024972763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_35
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 71
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54e289bf0936a2a0800000000000000
+      internalID: -6726626253731601313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_36
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 71
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7221023b3ec8a3050800000000000000
+      internalID: 5781087981274141223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_37
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 72
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e32b480a57396f80800000000000000
+      internalID: -8112892393905511455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_38
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 77
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c4c1c8a257a1120800000000000000
+      internalID: 2385347778245839967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_39
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 77
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457dbc40501eb7cb0800000000000000
+      internalID: -4865047560772135084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_40
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 77
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d2111eae026ac40800000000000000
+      internalID: 5523138186186927474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_41
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 76
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff24751d9278ee0d0800000000000000
+      internalID: -3391624855687838977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_42
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 76
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a89ae43dd2b8ca50800000000000000
+      internalID: 6541675121900951714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_43
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 76
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac60bb3e8fd6f930800000000000000
+      internalID: 4176771506412481710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_44
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 74
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50de27cc47e00870800000000000000
+      internalID: 8647165601496617053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_45
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 74
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31356467d0a1fd090800000000000000
+      internalID: -8007652967320235245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_46
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 75
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752635722f5058f80800000000000000
+      internalID: -8105065416783338921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_47
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 80
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395cb438844a22f00800000000000000
+      internalID: 1090614691124462995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_48
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 80
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c455b948664a0920800000000000000
+      internalID: 2957253519049315520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_49
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 80
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0020c64b6920a5770800000000000000
+      internalID: 8600189284712710656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_50
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 11
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee896cdda0cc32c90800000000000000
+      internalID: -7195683432565401362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_51
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 11
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c45531e46346690800000000000000
+      internalID: -7609897761389589368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_52
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 12
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c9f17d25f9f6f00800000000000000
+      internalID: 1112282811129109644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_53
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 17
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c849e5a6ffa6870800000000000000
+      internalID: 8677028464401091681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_54
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 17
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bcbcb3fa2381730800000000000000
+      internalID: 3969978799730969344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_55
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 17
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0748f0342dd223ca0800000000000000
+      internalID: -6038713769258941328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_56
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 16
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6454818b0d63ea590800000000000000
+      internalID: -7661125646040939194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_57
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 16
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4b34a3d5b5fda40800000000000000
+      internalID: 5395131334580745452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_58
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 16
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a28571599829d50800000000000000
+      internalID: 6742602865561840139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_59
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 14
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad470de6443e4bf10800000000000000
+      internalID: 2284700794040120538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_60
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 14
+        width: 21
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb053e4f994ada00800000000000000
+      internalID: 782018433862929355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_61
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 15
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4daea53ffe413b070800000000000000
+      internalID: 8120857573891697364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_62
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 20
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82836198ce2a1cf30800000000000000
+      internalID: 4594132231690532904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_63
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 20
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2610c5143b76c01e0800000000000000
+      internalID: -2230293695861882526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bushestree_64
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 20
+        width: 22
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f14dd1e8af9099b0800000000000000
+      internalID: -5075381232353852942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ba7d71fd54dc2644d81724926149c26c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bushestree_0: 763194697099742008
+      bushestree_1: 9028186534741208807
+      bushestree_10: 7302023987031911391
+      bushestree_11: -7609075106538697773
+      bushestree_12: 9034252092404416299
+      bushestree_13: 3850809570237668470
+      bushestree_14: 2396893367185479802
+      bushestree_15: 5570614199198358631
+      bushestree_16: 7918680409277356953
+      bushestree_17: -3151106853560171599
+      bushestree_18: 1403505548055121954
+      bushestree_19: 1236120678225662747
+      bushestree_2: -7605158563673218013
+      bushestree_20: 3533987247554144308
+      bushestree_21: 1967366863805286911
+      bushestree_22: 2458420690564053391
+      bushestree_23: -8759597803110191325
+      bushestree_24: -2564062568981515435
+      bushestree_25: 9155014443471853116
+      bushestree_26: -7799214856860759304
+      bushestree_27: -8490577469769630299
+      bushestree_28: 5006448431436441690
+      bushestree_29: 6930818540561430329
+      bushestree_3: 6639606835188379278
+      bushestree_30: 2043259871089377587
+      bushestree_31: -3046999956709996703
+      bushestree_32: -2971317216518368624
+      bushestree_33: 565535884481630915
+      bushestree_34: 1567282973024972763
+      bushestree_35: -6726626253731601313
+      bushestree_36: 5781087981274141223
+      bushestree_37: -8112892393905511455
+      bushestree_38: 2385347778245839967
+      bushestree_39: -4865047560772135084
+      bushestree_4: -6349958699781430465
+      bushestree_40: 5523138186186927474
+      bushestree_41: -3391624855687838977
+      bushestree_42: 6541675121900951714
+      bushestree_43: 4176771506412481710
+      bushestree_44: 8647165601496617053
+      bushestree_45: -8007652967320235245
+      bushestree_46: -8105065416783338921
+      bushestree_47: 1090614691124462995
+      bushestree_48: 2957253519049315520
+      bushestree_49: 8600189284712710656
+      bushestree_5: -7698412014443926478
+      bushestree_50: -7195683432565401362
+      bushestree_51: -7609897761389589368
+      bushestree_52: 1112282811129109644
+      bushestree_53: 8677028464401091681
+      bushestree_54: 3969978799730969344
+      bushestree_55: -6038713769258941328
+      bushestree_56: -7661125646040939194
+      bushestree_57: 5395131334580745452
+      bushestree_58: 6742602865561840139
+      bushestree_59: 2284700794040120538
+      bushestree_6: -2927260482679189581
+      bushestree_60: 782018433862929355
+      bushestree_61: 8120857573891697364
+      bushestree_62: 4594132231690532904
+      bushestree_63: -2230293695861882526
+      bushestree_64: -5075381232353852942
+      bushestree_7: -8758031400951761887
+      bushestree_8: -1962246079677148268
+      bushestree_9: -1410763567089489702
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
