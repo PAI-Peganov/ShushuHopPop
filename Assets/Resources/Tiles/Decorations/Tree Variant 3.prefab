@@ -214,11 +214,11 @@ PrefabInstance:
       objectReference: {fileID: -1172449274242890810, guid: 86ecb67c2d0f3924799d2cc277db18c2, type: 3}
     - target: {fileID: 759399803140352194, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 759399803140352194, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 759399803140352194, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -254,11 +254,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2610887587482867624, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.060000002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2610887587482867624, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.120000005
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177376684659966110, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812982037436448233, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
+      propertyPath: m_Height
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812982037436448233, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812982037436448233, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6146450266899466528, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -271,6 +287,10 @@ PrefabInstance:
     - target: {fileID: 6218662188604343284, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
       propertyPath: m_Name
       value: Tree Variant 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222697390899193356, guid: fe427121fdc4ae841b8bf78e482efb06, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,14 +9,12 @@ public class CameraMovement : MonoBehaviour
     private float cameraSpeed;
     [SerializeField]
     private Camera playerCamera;
-    private CharacterController characterController;
     private Vector3 targetPosition;
     private float cameraToTargetDistance;
     private bool isGoing;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        characterController = GetComponent<CharacterController>();
         playerCamera.transform.SetParent(null);
         targetPosition = playerCamera.transform.position;
         isGoing = false;
@@ -38,8 +36,8 @@ public class CameraMovement : MonoBehaviour
 
     private void UpdateGoing()
     {
-        targetPosition.Set(characterController.transform.position.x,
-                           characterController.transform.position.y,
+        targetPosition.Set(transform.position.x,
+                           transform.position.y,
                            targetPosition.z);
         cameraToTargetDistance = Vector3.Distance(targetPosition, playerCamera.transform.position);
         if (cameraToTargetDistance > movingOffset)
