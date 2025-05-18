@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1012655608618680546}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,6 +137,90 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1326281532962121021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5941071601780068326}
+  - component: {fileID: 2610274818741973353}
+  m_Layer: 0
+  m_Name: FlashLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5941071601780068326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326281532962121021}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3032518547708327219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2610274818741973353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326281532962121021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 036529f54da227465122a60300000000b59edc06196745f33d2de4d9150cb38a5dd8d079
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.75
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 20
+  m_PointLightOuterAngle: 60
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 6
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &2585169154108864085
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,8 +247,8 @@ Transform:
   m_GameObject: {fileID: 2585169154108864085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 1.2750001, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3032518547708327219}
@@ -184,7 +268,7 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.43
+  m_FalloffIntensity: 0.8
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
@@ -205,8 +289,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020003319, y: -0.00024998188, z: 0}
-    m_Extent: {x: 2.25, y: 2.2501502, z: 0}
+    m_Center: {x: 0.0023499727, y: -0.0022000074, z: 0}
+    m_Extent: {x: 1.49745, y: 1.4978, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -214,7 +298,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 1.75
+  m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: 0.5, y: 0, z: 0}
@@ -260,10 +344,12 @@ GameObject:
   - component: {fileID: 3032518547708327219}
   - component: {fileID: 2554397498146896436}
   - component: {fileID: 2557944517638308877}
-  - component: {fileID: 4855598439237414863}
+  - component: {fileID: 2753376418372883503}
+  - component: {fileID: 6357472686086817665}
   - component: {fileID: 3506596165022255510}
   - component: {fileID: 8447594163406093021}
   - component: {fileID: 1970487627138241610}
+  - component: {fileID: 7916647781791330642}
   - component: {fileID: 5477825223789380728}
   - component: {fileID: 6134703809177936267}
   - component: {fileID: 6726119302719583436}
@@ -287,6 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5941071601780068326}
   - {fileID: 4995523198882424773}
   - {fileID: 5525198458134295255}
   m_Father: {fileID: 0}
@@ -358,7 +445,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8a80c2d1bc1d24fa1201ab88e2e5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4855598439237414863
+  isCellDependent: 0
+--- !u!114 &2753376418372883503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037545643643715926}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d4cf0691871784a97e5fecd139f8d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6357472686086817665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,7 +467,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4037545643643715926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b4c367deec967418255204eed4910a, type: 3}
+  m_Script: {fileID: 11500000, guid: d6f0a82d8b1edb946abac454c4fad05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3506596165022255510
@@ -404,8 +504,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.5
+  m_Height: 0.4
+  m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -426,6 +526,20 @@ MonoBehaviour:
   movingOffset: 0.7
   cameraSpeed: 0.6
   playerCamera: {fileID: 3578380994333270345}
+--- !u!114 &7916647781791330642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037545643643715926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072eff4e5383574ba11fca4f8cb4f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashLight: {fileID: 2610274818741973353}
+  rotationSpeed: 20
 --- !u!114 &5477825223789380728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,11 +571,19 @@ MonoBehaviour:
   - {fileID: 7400000, guid: a1b370dd104a84f40a04df611111603a, type: 2}
   - {fileID: 7400000, guid: 3de254d35bc7e494799b8edfa30cf0da, type: 2}
   - {fileID: 7400000, guid: c0a241d25a3247341a730347b292aa30, type: 2}
+  - {fileID: 7400000, guid: c16edda7bc185f84fb7c435565a8fae0, type: 2}
+  - {fileID: 7400000, guid: b4a265c4d8d39f34dbf1d2bf1db4f757, type: 2}
+  - {fileID: 7400000, guid: 4c660afc1c5adb74c8dc242ea5190590, type: 2}
+  - {fileID: 7400000, guid: d3534fd90d8c59045bd2379e6b2c66de, type: 2}
   AnimatedSpritesStand:
   - {fileID: 7400000, guid: 9525eef863bd29148841884eb1fa81d7, type: 2}
   - {fileID: 7400000, guid: d2308e366b20a234daf99bbe56aea3c8, type: 2}
   - {fileID: 7400000, guid: 1a4fd28c17c8dd44da41c01e3c61751e, type: 2}
   - {fileID: 7400000, guid: 4906daf3aac5c304e8a6ace7b858770f, type: 2}
+  - {fileID: 7400000, guid: fcdfe4e192c595b48b8d92f33b0a7517, type: 2}
+  - {fileID: 7400000, guid: bbd0ccfbcf79acf42a6df25a68190d9f, type: 2}
+  - {fileID: 7400000, guid: c411561ecfc4f0a4c90b14a6d3afb677, type: 2}
+  - {fileID: 7400000, guid: cc4c7474743459e49a9b62a9c1957546, type: 2}
 --- !u!95 &6726119302719583436
 Animator:
   serializedVersion: 7

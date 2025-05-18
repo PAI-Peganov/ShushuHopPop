@@ -18,9 +18,9 @@ public class Map : MonoBehaviour
     [SerializeField]
     private Vector2Int PlayerStart;
  
-    private int MapWidth = 24;
-    private int MapHeight = 24;
-    private int LayersCount;
+    //private int MapWidth = 24;
+    //private int MapHeight = 24;
+    //private int LayersCount;
 
     public CellNode[,] map;
 
