@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        playerMotor.SetCharacterMove(playerActions.MoveGS.ReadValue<Vector2>());
-        playerMotor.SetCharacterMove(playerActions.MoveWASD.ReadValue<Vector2>());
+        playerMotor.SetCharacterMove(
+            playerActions.MoveGS.ReadValue<Vector2>(),
+            playerActions.MoveWASD.ReadValue<Vector2>());
     }
 }

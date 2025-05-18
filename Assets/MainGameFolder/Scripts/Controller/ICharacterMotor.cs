@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface ICharacterMotor
 {
-    public void SetCharacterMove(Vector2 controllerDirection);
+    public void SetCharacterMove(params Vector2[] controllerDirection);
 }

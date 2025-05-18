@@ -55,12 +55,14 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
         TryMoveCharacter();
     }
 
-    public void SetCharacterMove(Vector2 controllerDirection)
+    public void SetCharacterMove(params Vector2[] controllerDirections)
     {
+        var controllerDirection = controllerDirections
+            .FirstOrDefault(dir => dir.magnitude > 0.1f);
         if (controllerDirection.magnitude > 0.1f)
         {
             var calculatedDirection = CalculateMove(controllerDirection);
-            if (Vector3.Dot(calculatedDirection, moveDirection) > 0.9f)
+            if (Vector3.Dot(calculatedDirection.normalized, moveDirection.normalized) > 0.9f)
                 lastStepMoment = CurrentTime;
             if (CurrentTime - lastStepMoment > 0.05f)
             {
@@ -80,7 +82,8 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
         else if (character.IsMoving)
         {
             character.IsMoving = false;
-            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5, () => {
+            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5, () =>
+            {
                 if (!character.IsMoving)
                     animationsSwitcher.SetSpriteStanding();
             }));

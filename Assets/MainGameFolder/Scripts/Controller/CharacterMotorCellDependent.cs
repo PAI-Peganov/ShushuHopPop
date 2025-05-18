@@ -43,8 +43,10 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
         TryMoveCharacter();
     }
 
-    public void SetCharacterMove(Vector2 controllerDirection)
+    public void SetCharacterMove(params Vector2[] controllerDirections)
     {
+        var controllerDirection = controllerDirections
+            .FirstOrDefault(dir => dir.magnitude > 0.1f);
         if (Math.Abs(controllerDirection.x) > 0.1f &&
             Math.Abs(controllerDirection.y) > 0.1f &&
             CanMoveTimer <= 0f)
