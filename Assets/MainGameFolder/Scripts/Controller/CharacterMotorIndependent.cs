@@ -21,6 +21,18 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 
     public float CurrentTime => Time.realtimeSinceStartup;
 
+    private readonly Vector2[] eightDirections = new Vector2[]
+    {
+        new Vector2(0.71f, 0.71f).normalized,
+        new Vector2(0.71f, -0.71f).normalized,
+        new Vector2(-0.71f, -0.71f).normalized,
+        new Vector2(-0.71f, 0.71f).normalized,
+        new (1, 0),
+        new (0, -1),
+        new (-1, 0),
+        new (0, 1)
+    };
+
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -48,7 +60,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
         if (controllerDirection.magnitude > 0.1f)
         {
             var calculatedDirection = CalculateMove(controllerDirection);
-            if (Vector3.Dot(calculatedDirection, moveDirection) > 0.95f)
+            if (Vector3.Dot(calculatedDirection, moveDirection) > 0.9f)
                 lastStepMoment = CurrentTime;
             if (CurrentTime - lastStepMoment > 0.05f)
             {
@@ -58,12 +70,17 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
             }
             startMovePosition = characterController.transform.position;
             aimMovePosition = startMovePosition + moveDirection;
-            character.IsMoving = true;
+            if (!character.IsMoving)
+            {
+                character.IsMoving = true;
+                animationsSwitcher.SetSpriteWalkingByEightDirections(
+                    new Vector2(moveDirection.x, moveDirection.y));
+            }
         }
         else if (character.IsMoving)
         {
             character.IsMoving = false;
-            StartCoroutine(CorotineEnumerator(0.1f, () => {
+            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5, () => {
                 if (!character.IsMoving)
                     animationsSwitcher.SetSpriteStanding();
             }));
@@ -83,5 +100,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     }
 
     private Vector3 CalculateMove(Vector2 controllerDirection) =>
-        new Vector3(controllerDirection.x * 1.7f, controllerDirection.y, 0).normalized;
+        eightDirections.OrderByDescending(dir => (dir + controllerDirection).magnitude)
+        .Select(vec => new Vector3(vec.x * 1.7f, vec.y, 0))
+        .First();
 }

@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput.PlayerActions playerActions;
     private ICharacterMotor playerMotor;
-    private float SinWASD = Mathf.Sin(-45);
-    private float CosWASD = Mathf.Cos(-45);
 
     void Awake()
     {

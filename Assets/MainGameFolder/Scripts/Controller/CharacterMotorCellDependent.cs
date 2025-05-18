@@ -45,8 +45,8 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
 
     public void SetCharacterMove(Vector2 controllerDirection)
     {
-        if (controllerDirection.x > 0.1f &&
-            controllerDirection.y > 0.1f &&
+        if (Math.Abs(controllerDirection.x) > 0.1f &&
+            Math.Abs(controllerDirection.y) > 0.1f &&
             CanMoveTimer <= 0f)
         {
             startMovePosition = characterController.transform.position;

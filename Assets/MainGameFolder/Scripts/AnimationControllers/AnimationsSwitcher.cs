@@ -9,6 +9,7 @@ public class AnimationsSwitcher : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private Entity entity;
+    private AnimationClip currentClip;
     private AnimationClip nextStanding;
     [SerializeField]
     private float movingAnimationSpeed;
@@ -18,12 +19,12 @@ public class AnimationsSwitcher : MonoBehaviour
     private AnimationClip[] AnimatedSpritesWalk;
     [SerializeField]
     private AnimationClip[] AnimatedSpritesStand;
-    private Vector2[] eightDirections = new Vector2[]
+    private readonly Vector2[] eightDirections = new Vector2[]
     {
-        new (0.71f, 0.71f),
-        new (0.71f, -0.71f),
-        new (-0.71f, -0.71f),
-        new (-0.71f, 0.71f),
+        new Vector2(0.71f, 0.71f).normalized,
+        new Vector2(0.71f, -0.71f).normalized,
+        new Vector2(-0.71f, -0.71f).normalized,
+        new Vector2(-0.71f, 0.71f).normalized,
         new (1, 0),
         new (0, -1),
         new (-1, 0),
@@ -34,6 +35,7 @@ public class AnimationsSwitcher : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         entity = GetComponent<Entity>();
+        SetSpriteWalkingByEightDirections(new Vector2(0, 1), true);
     }
 
     public void SetSpriteWalkingByEightDirections(Vector2 moveDirection, bool hard=false) =>
@@ -50,8 +52,9 @@ public class AnimationsSwitcher : MonoBehaviour
             .OrderBy(x => (x.vector + moveDirection).magnitude)
             .Last()
             .sprites;
-        if (hard || animator.GetCurrentAnimatorClipInfo(0).First().clip == sprites.Walk)
+        if (hard || currentClip.name != sprites.Walk.name)
         {
+            currentClip = sprites.Walk;
             animator.Play(sprites.Walk.name);
             animator.speed = movingAnimationSpeed * entity.MoveSpeed;
             nextStanding = sprites.Stand;
@@ -60,6 +63,7 @@ public class AnimationsSwitcher : MonoBehaviour
 
     public void SetSpriteStanding()
     {
+        currentClip = nextStanding;
         animator.Play(nextStanding.name);
         animator.speed = standingAnimationSpeed;
     }
