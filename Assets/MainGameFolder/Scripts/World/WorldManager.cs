@@ -8,6 +8,7 @@ public static class WorldManager
     private static Map Map;
     public static List<Vector2> HalfCellMoveVectors { get; private set; }
     public static Vector3 PlayerStart { get; private set; }
+    public static Vector3Int PlayerCellPosition { get; private set; }
 
     public static void AddNewMap(Map map)
     {
@@ -38,6 +39,6 @@ public static class WorldManager
 
     public static void UpdatePlayerLocation(Vector3 closePositionOfPlayer)
     {
-        
+        PlayerCellPosition = Map.GetGridCordsByGridPosition(closePositionOfPlayer);
     }
 }

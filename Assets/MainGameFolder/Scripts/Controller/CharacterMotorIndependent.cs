@@ -98,7 +98,10 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     private void TryMoveCharacter()
     {
         if (character.IsMoving)
+        {
             transform.position += moveDirection * entityMoveSpeed * Time.deltaTime;
+            WorldManager.UpdatePlayerLocation(transform.position);
+        }
     }
 
     private Vector3 CalculateMove(Vector2 controllerDirection) =>
