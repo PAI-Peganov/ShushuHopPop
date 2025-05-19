@@ -8,7 +8,6 @@ using System;
 
 public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
 {
-    private CharacterController characterController;
     private Entity character;
     private AnimationsSwitcher animationsSwitcher;
     private float lastStepMoment;
@@ -20,12 +19,12 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
     private bool isMovingToGridline;
     private bool isMovingToNextCell;
 
+    public Vector3 MoveDirection => aimMovePosition - startMovePosition;
     public float CurrentTime => Time.realtimeSinceStartup;
     public float CanMoveTimer => character.IsMoving ? 1 : (1 - (CurrentTime - lastStepMoment) / entityMoveTimeout);
 
     void Awake()
     {
-        characterController = GetComponent<CharacterController>();
         lastStepMoment = 0f;
         character = GetComponent<Entity>();
         animationsSwitcher = GetComponent<AnimationsSwitcher>();
@@ -34,7 +33,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
     void Start()
     {
         aimMovePosition = WorldManager.PlayerStart;
-        characterController.Move(aimMovePosition);
+        transform.position = aimMovePosition;
     }
 
     // Update is called once per frame
@@ -51,7 +50,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
             Math.Abs(controllerDirection.y) > 0.1f &&
             CanMoveTimer <= 0f)
         {
-            startMovePosition = characterController.transform.position;
+            startMovePosition = transform.position;
             var calculatedDirection = CalculateMove(controllerDirection);
             aimMovePosition = startMovePosition + calculatedDirection;
             character.IsMoving = true;
@@ -70,7 +69,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
     {
         if (!character.IsMoving)
             return;
-        characterController.transform.position = Vector3.MoveTowards(characterController.transform.position,
+        transform.position = Vector3.MoveTowards(transform.position,
                                                                      aimMovePosition,
                                                                      entityMoveSpeed * Time.deltaTime);
         TryChooseNextMove();
@@ -78,7 +77,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
 
     private void TryChooseNextMove()
     {
-        if (Vector3.Distance(characterController.transform.position, aimMovePosition) == 0f)
+        if (Vector3.Distance(transform.position, aimMovePosition) == 0f)
         {
             if (isMovingToGridline)
             {

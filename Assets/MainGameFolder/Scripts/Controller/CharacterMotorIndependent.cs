@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 
 public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 {
-    private CharacterController characterController;
     private Entity character;
     private AnimationsSwitcher animationsSwitcher;
     private float lastStepMoment;
@@ -18,6 +17,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     private Vector3 startMovePosition;
     private Vector3 aimMovePosition;
     private Vector3 moveDirection;
+    public Vector3 MoveDirection => new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
     public float CurrentTime => Time.realtimeSinceStartup;
 
@@ -35,7 +35,6 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 
     void Awake()
     {
-        characterController = GetComponent<CharacterController>();
         lastStepMoment = 0f;
         character = GetComponent<Entity>();
         animationsSwitcher = GetComponent<AnimationsSwitcher>();
@@ -44,7 +43,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     void Start()
     {
         aimMovePosition = WorldManager.PlayerStart;
-        characterController.Move(aimMovePosition);
+        transform.position = aimMovePosition;
         moveDirection = new Vector3(1.7f, 1f, 0f);
         aimMovePosition += moveDirection;
     }
@@ -70,7 +69,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
                 animationsSwitcher.SetSpriteWalkingByEightDirections(
                     new Vector2(moveDirection.x, moveDirection.y));
             }
-            startMovePosition = characterController.transform.position;
+            startMovePosition = transform.position;
             aimMovePosition = startMovePosition + moveDirection;
             if (!character.IsMoving)
             {
@@ -99,7 +98,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     private void TryMoveCharacter()
     {
         if (character.IsMoving)
-            characterController.Move(moveDirection * entityMoveSpeed * Time.deltaTime);
+            transform.position += moveDirection * entityMoveSpeed * Time.deltaTime;
     }
 
     private Vector3 CalculateMove(Vector2 controllerDirection) =>
