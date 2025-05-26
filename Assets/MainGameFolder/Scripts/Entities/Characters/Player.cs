@@ -15,9 +15,9 @@ namespace EntityBase
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
-
+            WorldManager.UpdatePlayerLocation(transform.position);
         }
     }
 }

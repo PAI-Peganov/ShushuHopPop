@@ -4,7 +4,7 @@ using UnityEngine;
 using EntityBase;
 using System.Collections.Generic;
 
-public class AnimationsSwitcher : MonoBehaviour
+public class AnimationsSoundsCaster : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
@@ -56,9 +56,14 @@ public class AnimationsSwitcher : MonoBehaviour
         {
             currentClip = sprites.Walk;
             animator.Play(sprites.Walk.name);
-            animator.speed = movingAnimationSpeed * entity.MoveSpeed;
             nextStanding = sprites.Stand;
         }
+        animator.speed = movingAnimationSpeed * entity.MoveSpeed;
+    }
+
+    public void SetAnimationFreeze()
+    {
+        animator.speed = 0f;
     }
 
     public void SetSpriteStanding()
@@ -66,5 +71,20 @@ public class AnimationsSwitcher : MonoBehaviour
         currentClip = nextStanding;
         animator.Play(nextStanding.name);
         animator.speed = standingAnimationSpeed;
+    }
+
+    public void OpenEyes()
+    {
+
+    }
+
+    public void CloseEyes()
+    {
+
+    }
+
+    public void FlashEyesDuration(float duration)
+    {
+
     }
 }
