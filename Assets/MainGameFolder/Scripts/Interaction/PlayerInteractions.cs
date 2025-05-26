@@ -4,11 +4,19 @@ using UnityEngine.Rendering.Universal;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private PlayerFightSystem fightSystem;
+
+    void Awake()
+    {
+        fightSystem = GetComponent<PlayerFightSystem>();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
         {
             case "Enemy":
+                fightSystem.StartFightMonster(collision.gameObject.GetComponent<Monster>());
                 break;
             case "Mushroom":
                 foreach (Light2D lighter in FindObjectsByType<Light2D>(FindObjectsSortMode.None))
