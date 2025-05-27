@@ -100,7 +100,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
                 () =>
                 {
                     animationsSwitcher.SetSpriteWalkingByEightDirections(moveDirection, true);
-                    animationsSwitcher.SetAnimationFreeze();
+                    animationsSwitcher.SetAnimationSpeed(0.5f);
                 }));
             return true;
         }

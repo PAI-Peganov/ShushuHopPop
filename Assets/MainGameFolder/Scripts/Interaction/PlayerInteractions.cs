@@ -15,9 +15,6 @@ public class PlayerInteractions : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "Enemy":
-                fightSystem.StartFightMonster(collision.gameObject.GetComponent<Monster>());
-                break;
             case "Mushroom":
                 foreach (Light2D lighter in FindObjectsByType<Light2D>(FindObjectsSortMode.None))
                 {
@@ -26,6 +23,20 @@ public class PlayerInteractions : MonoBehaviour
                     if (lighter.lightType == Light2D.LightType.Global)
                         lighter.intensity = 0.0001f;
                 }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Enemy":
+                var enemy = collision.gameObject.GetComponent<Monster>();
+                if (enemy.CanAtack)
+                    fightSystem.StartFightMonster(enemy);
                 break;
             default:
                 break;

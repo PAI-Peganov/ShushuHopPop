@@ -61,9 +61,9 @@ public class AnimationsSoundsCaster : MonoBehaviour
         animator.speed = movingAnimationSpeed * entity.MoveSpeed;
     }
 
-    public void SetAnimationFreeze()
+    public void SetAnimationSpeed(float speed)
     {
-        animator.speed = 0f;
+        animator.speed = speed;
     }
 
     public void SetSpriteStanding()

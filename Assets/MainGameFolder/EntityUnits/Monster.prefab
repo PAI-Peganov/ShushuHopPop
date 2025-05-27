@@ -111,14 +111,15 @@ MonoBehaviour:
   healthPoints: 100
   defaultMoveTimeout: 0.05
   defaultMoveSpeed: 1
-  dashPrepaireTime: 1
-  dashSpeed: 2
+  dashPrepaireTime: 0.7
+  dashSpeed: 3
   dashDistance: 2
-  dashCalldownTime: 2
+  dashCalldownTime: 3
   defaultDamage: 20
   defaultResistanse: 0
   id: monster
   startCell: {x: 1, y: 1}
+  atackCalldown: 0
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   homeCell: {x: 2, y: 2}
   homeDefendingRadius: 1.5
-  playerDetectingRadius: 1
+  playerDetectingRadius: 1.5
   targetSwitchTime: 1
   targetSwitchTimeDelta: 0.1
 --- !u!114 &9149619482271005493
@@ -265,7 +266,7 @@ Animator:
   m_GameObject: {fileID: 4645366703141890134}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc5b0c2c6a56fd7489d25f9bcb19dbdd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 258e8ecf27ec0394a880e58dee7ffc9f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

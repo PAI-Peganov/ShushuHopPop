@@ -18,7 +18,7 @@ public class PlayerFightSystem : MonoBehaviour
 
     public void StartFightMonster(Monster monster)
     {
-        player.TakeDamage(monster.GiveDamage);
+        player.TakeDamage(monster.AtackDamage);
         Debug.Log("FightStarted");
     }
 }

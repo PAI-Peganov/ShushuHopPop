@@ -34,7 +34,7 @@ namespace EntityBase
         public bool IsMoving { private set; get; }
         public bool IsDashing { private set; get; }
         public bool IsWaiting { private set; get; }
-        public float GiveDamage => defaultDamage;
+        public float AtackDamage => defaultDamage;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         protected void Awake()
         {
