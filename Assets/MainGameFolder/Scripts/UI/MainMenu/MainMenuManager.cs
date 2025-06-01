@@ -1,7 +1,4 @@
-﻿using System;
-using MainGameFolder.Scripts.UI.Quest;
-using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -15,15 +12,10 @@ namespace MainGameFolder.Scripts.UI.MainMenu
         [FormerlySerializedAs("SettingsMenu")] [SerializeField]
         private Canvas settingsMenu;
 
-        // [SerializeField]
-        // private QuestsManager questsManager;
-
         // Starts the game from saved state
         public void Play()
         {
-            var nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            //questsManager.SetupQuestsByScene(nextSceneIndex);
-            SceneManager.LoadScene(nextSceneIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         //TODO:
