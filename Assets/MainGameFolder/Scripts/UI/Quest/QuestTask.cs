@@ -2,17 +2,19 @@ namespace MainGameFolder.Scripts.UI.Quest
 {
     public class QuestTask
     {
-        private string questText;
-        private bool isDone;
+        public string QuestText { get; private set; }
+        
+        public string key { get; private set; }
+        public bool IsDone { get; private set; }
 
-        public QuestTask(string questText)
+        public QuestTask(string questText, string key)
         {
-            this.questText = questText;
+            QuestText = questText;
         }
 
         public void MakeDone()
         {
-            isDone = true;
+            IsDone = true;
         }
     }
 }

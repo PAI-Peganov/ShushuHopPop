@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 1e9e847b51413bf478c01e9cf24021cd
+guid: 4d66250366bb07446aa200311618f5c1
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4873193004133875349
     second: Isometric Buildings 2 - 64x96_0
+  - first:
+      213: 8135675981524733434
+    second: Isometric Buildings 2 - 64x96_1
+  - first:
+      213: -8035953412460044570
+    second: Isometric Buildings 2 - 64x96_2
+  - first:
+      213: 697550420448353967
+    second: Isometric Buildings 2 - 64x96_3
+  - first:
+      213: -2396938402257986459
+    second: Isometric Buildings 2 - 64x96_4
+  - first:
+      213: 6737226054700847574
+    second: Isometric Buildings 2 - 64x96_5
+  - first:
+      213: -7465112591393572084
+    second: Isometric Buildings 2 - 64x96_6
+  - first:
+      213: 7942633493903865031
+    second: Isometric Buildings 2 - 64x96_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +69,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -104,11 +125,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 672
-        width: 128
-        height: 96
+        y: 671
+        width: 1152
+        height: 97
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,20 +146,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 575
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1f4794287fe017b42a8881d92c144b42
-      internalID: -259742686
+      spriteID: afd8576533ab7e070800000000000000
+      internalID: 8135675981524733434
       vertices: []
       indices: 
       edges: []
@@ -147,20 +168,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 479
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5365a1a991267ef4c86e81328e32e9c8
-      internalID: 1405198684
+      spriteID: 6ee1bba92fe8a7090800000000000000
+      internalID: -8035953412460044570
       vertices: []
       indices: 
       edges: []
@@ -169,20 +190,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 383
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 27dfe33dd42df8f4f885e3783ba22660
-      internalID: -1914471817
+      spriteID: fae9fbf59623ea900800000000000000
+      internalID: 697550420448353967
       vertices: []
       indices: 
       edges: []
@@ -191,20 +212,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 287
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ca8769d503bde1e43bdb9fdc8f177ed0
-      internalID: -2070181989
+      spriteID: 56c9be0093d5cbed0800000000000000
+      internalID: -2396938402257986459
       vertices: []
       indices: 
       edges: []
@@ -213,20 +234,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 191
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 267ad8e0890841641974f9ea81fdebc6
-      internalID: 924609783
+      spriteID: 6d153f1c66f6f7d50800000000000000
+      internalID: 6737226054700847574
       vertices: []
       indices: 
       edges: []
@@ -235,20 +256,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_6
       rect:
         serializedVersion: 2
-        x: 768
-        y: 672
-        width: 128
-        height: 96
+        x: 0
+        y: 95
+        width: 1152
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a295bdda94c333447a4638ba383d5174
-      internalID: -601369301
+      spriteID: c0bb0b566a7966890800000000000000
+      internalID: -7465112591393572084
       vertices: []
       indices: 
       edges: []
@@ -257,1428 +278,20 @@ TextureImporter:
       name: Isometric Buildings 2 - 64x96_7
       rect:
         serializedVersion: 2
-        x: 896
-        y: 672
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf92f1b69cd2eb4a9f5324ea647af4b
-      internalID: 509829255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 672
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cc74069178e49b4ca5d70fa33f8c492
-      internalID: -1541010848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 506c4501ce1058d4aa9cfa46578491c4
-      internalID: 885805554
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9772009d655e4444a99a90cd88859e12
-      internalID: -1821073951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_11
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ede5a4f45601f284da3b497d61470ad6
-      internalID: 107727348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_12
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5c7cb873ee8ae646be5eb185004da39
-      internalID: 347235182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_13
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b4096298610cb14b8beea26ae2660c5
-      internalID: 321538301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_14
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0180d0735415d3479e3c42f87dc4062
-      internalID: 1907537660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_15
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3aff7bc8e11b144b35cf7f75d1fa90
-      internalID: -1546713461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_16
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 016172c824531604990e282b99f7582f
-      internalID: -270650802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_17
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 576
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afab02551c03bfe48a4f3f25d607f006
-      internalID: -1934731746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ce3aca907f503c4db6938b578296489
-      internalID: -1464253613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_19
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebf4ed73df0728b4ea67cf932c12d2e7
-      internalID: -423819329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_20
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb59a376631b26041b81e8882f038e6e
-      internalID: 1547405378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_21
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80eb90f5d3e664a43a58a9b208b25d81
-      internalID: 831584586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_22
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 518934f853b6713469fa1c690ae98ac2
-      internalID: -1391361926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_23
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ad1d682e3831764ab6c83ad27d85f9f
-      internalID: 490076327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_24
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c627ca17fae53664f9963a1ff6ad86ff
-      internalID: 1766273511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_25
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 670e681d90aed594e9a4352d0fbc94af
-      internalID: -468992031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_26
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 480
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01c01d1e20088c74f9f185547666cb95
-      internalID: 788379222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_27
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69636940f349cca4391bc132f211f447
-      internalID: 1859844873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_28
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec9001e2d570bf54abf65c36aaa1469a
-      internalID: -1335507909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_29
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9301e4da87bc6d6468e28ccd73836713
-      internalID: -75463228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_30
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21e481c7265003f47aa1ee7db45cb137
-      internalID: -536013880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_31
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e517c18913fc82c478463285ac3c7f3a
-      internalID: -1074732330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_32
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e168e09a7e0bff44836197ebdd80341
-      internalID: -1318169886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_33
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f58a51a3fb613e499a1ca7c729dcd45
-      internalID: 1315452633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_34
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef3e3c00c3150394ba282e664cfedd58
-      internalID: 1975646241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_35
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 384
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fedb419a6f7aa04aadd295e72bb894c
-      internalID: -1762687157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_36
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5351f0b51e3acc4592a90fccbabef67
-      internalID: 858442083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_37
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0c94abdf2e3b8e498f10c68ebcbdeb1
-      internalID: 1620144719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_38
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f14a050547a1304e87fdbd66e7a99be
-      internalID: 211171186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_39
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 391129dab1710bc4780dc182c3466e31
-      internalID: 1918026371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_40
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a048283d92b92e14bad8d536c9bc6e18
-      internalID: -1424645336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_41
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb4e0a40551f1db428f2515b6ded3475
-      internalID: -57764601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_42
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b70ac60e7d060043b080c34d30787b8
-      internalID: -371540010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_43
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 231b6a655ec38df469f62e7c0441c276
-      internalID: 693898737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_44
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 288
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58912eee3568de84780b2cba4a40e339
-      internalID: 292295085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_45
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bcf583f9394cf84183edaac6e379249
-      internalID: -960630530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_46
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf8b4e04bbfb06540a4679e341fbbbe0
-      internalID: 1912123579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_47
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83ebda2d0f9e7d743a91413a89324b0c
-      internalID: 2122106039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_48
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52d1821a273311043a1a48fe76070385
-      internalID: -1432410205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_49
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abe5e3b67a1c1ea4fb048abfb7de5ca9
-      internalID: -1049338003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_50
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffd36c0a67f40e14e9ca970694242140
-      internalID: 1842636570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_51
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eaf8bfcd0dc76248962b457943ff687
-      internalID: 1295673385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_52
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40a285f88fb699246abe0dd7469d14f1
-      internalID: -50498858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_53
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 192
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab3f16bc3d39abe47886b55168c65a8d
-      internalID: 1622576804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_54
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38660cb851c0b3c4796f66e689005e10
-      internalID: -1391438751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_55
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fcb93b17e5187a49a8c9e4f5c358391
-      internalID: -2077947049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_56
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81ae4746dc951194692c8babb0adc6b3
-      internalID: -556524368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_57
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01fd8582f3022b64c950e3a6aeab8699
-      internalID: 850030425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_58
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ebf3111e697b844c913366a6933361d
-      internalID: -1766049356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_59
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95393f836f14f754893f806ec6cc37ed
-      internalID: -2053798417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_60
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97f9fe35c6a98fe4ab23c150684a942f
-      internalID: -289183547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_61
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1408f7b747eb754686163584bccdc99
-      internalID: -2019127276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_62
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 96
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6a6fdcd8e16a274497ce3b2bbfb10fc
-      internalID: 2121850654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_63
-      rect:
-        serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 96
+        width: 1152
+        height: 97
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 93c0453c2651e104990c5c624d5a0dd0
-      internalID: 1181881486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_64
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 458ba933ba799534f914641647544887
-      internalID: -543462792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_65
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d9d724d66f3c4a438a477a1bf6b55e1
-      internalID: 1737414430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_66
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 747e049a689555d48b1055f168b80c60
-      internalID: -1254461749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_67
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 811af804a5834874d8e6f419d0f78698
-      internalID: -408413050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_68
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a8a5928e5d87494da8f1e07f375ce93
-      internalID: -1310955024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_69
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f058e7102483784781d27fd10e9b5f9
-      internalID: -1019827424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_70
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 360d1b3a14d4da146b195bbbd6b7392f
-      internalID: 1133477941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Buildings 2 - 64x96_71
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11fdc14f3ee9f854e8e91b8fbb53c1e8
-      internalID: -1287098189
+      spriteID: 7c47241b417e93e60800000000000000
+      internalID: 7942633493903865031
       vertices: []
       indices: 
       edges: []
@@ -1687,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5a43707a682b90b4f8e7c542f77f68be
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -1696,79 +309,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Isometric Buildings 2 - 64x96_0: -4873193004133875349
-      Isometric Buildings 2 - 64x96_1: -259742686
-      Isometric Buildings 2 - 64x96_10: -1821073951
-      Isometric Buildings 2 - 64x96_11: 107727348
-      Isometric Buildings 2 - 64x96_12: 347235182
-      Isometric Buildings 2 - 64x96_13: 321538301
-      Isometric Buildings 2 - 64x96_14: 1907537660
-      Isometric Buildings 2 - 64x96_15: -1546713461
-      Isometric Buildings 2 - 64x96_16: -270650802
-      Isometric Buildings 2 - 64x96_17: -1934731746
-      Isometric Buildings 2 - 64x96_18: -1464253613
-      Isometric Buildings 2 - 64x96_19: -423819329
-      Isometric Buildings 2 - 64x96_2: 1405198684
-      Isometric Buildings 2 - 64x96_20: 1547405378
-      Isometric Buildings 2 - 64x96_21: 831584586
-      Isometric Buildings 2 - 64x96_22: -1391361926
-      Isometric Buildings 2 - 64x96_23: 490076327
-      Isometric Buildings 2 - 64x96_24: 1766273511
-      Isometric Buildings 2 - 64x96_25: -468992031
-      Isometric Buildings 2 - 64x96_26: 788379222
-      Isometric Buildings 2 - 64x96_27: 1859844873
-      Isometric Buildings 2 - 64x96_28: -1335507909
-      Isometric Buildings 2 - 64x96_29: -75463228
-      Isometric Buildings 2 - 64x96_3: -1914471817
-      Isometric Buildings 2 - 64x96_30: -536013880
-      Isometric Buildings 2 - 64x96_31: -1074732330
-      Isometric Buildings 2 - 64x96_32: -1318169886
-      Isometric Buildings 2 - 64x96_33: 1315452633
-      Isometric Buildings 2 - 64x96_34: 1975646241
-      Isometric Buildings 2 - 64x96_35: -1762687157
-      Isometric Buildings 2 - 64x96_36: 858442083
-      Isometric Buildings 2 - 64x96_37: 1620144719
-      Isometric Buildings 2 - 64x96_38: 211171186
-      Isometric Buildings 2 - 64x96_39: 1918026371
-      Isometric Buildings 2 - 64x96_4: -2070181989
-      Isometric Buildings 2 - 64x96_40: -1424645336
-      Isometric Buildings 2 - 64x96_41: -57764601
-      Isometric Buildings 2 - 64x96_42: -371540010
-      Isometric Buildings 2 - 64x96_43: 693898737
-      Isometric Buildings 2 - 64x96_44: 292295085
-      Isometric Buildings 2 - 64x96_45: -960630530
-      Isometric Buildings 2 - 64x96_46: 1912123579
-      Isometric Buildings 2 - 64x96_47: 2122106039
-      Isometric Buildings 2 - 64x96_48: -1432410205
-      Isometric Buildings 2 - 64x96_49: -1049338003
-      Isometric Buildings 2 - 64x96_5: 924609783
-      Isometric Buildings 2 - 64x96_50: 1842636570
-      Isometric Buildings 2 - 64x96_51: 1295673385
-      Isometric Buildings 2 - 64x96_52: -50498858
-      Isometric Buildings 2 - 64x96_53: 1622576804
-      Isometric Buildings 2 - 64x96_54: -1391438751
-      Isometric Buildings 2 - 64x96_55: -2077947049
-      Isometric Buildings 2 - 64x96_56: -556524368
-      Isometric Buildings 2 - 64x96_57: 850030425
-      Isometric Buildings 2 - 64x96_58: -1766049356
-      Isometric Buildings 2 - 64x96_59: -2053798417
-      Isometric Buildings 2 - 64x96_6: -601369301
-      Isometric Buildings 2 - 64x96_60: -289183547
-      Isometric Buildings 2 - 64x96_61: -2019127276
-      Isometric Buildings 2 - 64x96_62: 2121850654
-      Isometric Buildings 2 - 64x96_63: 1181881486
-      Isometric Buildings 2 - 64x96_64: -543462792
-      Isometric Buildings 2 - 64x96_65: 1737414430
-      Isometric Buildings 2 - 64x96_66: -1254461749
-      Isometric Buildings 2 - 64x96_67: -408413050
-      Isometric Buildings 2 - 64x96_68: -1310955024
-      Isometric Buildings 2 - 64x96_69: -1019827424
-      Isometric Buildings 2 - 64x96_7: 509829255
-      Isometric Buildings 2 - 64x96_70: 1133477941
-      Isometric Buildings 2 - 64x96_71: -1287098189
-      Isometric Buildings 2 - 64x96_8: -1541010848
-      Isometric Buildings 2 - 64x96_9: 885805554
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

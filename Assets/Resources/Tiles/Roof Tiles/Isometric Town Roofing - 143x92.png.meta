@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: cd5a3300be5ce3f4781aa27c74f0f730
+guid: c008d71b3625a264f8d7aee2feadef36
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8583985961523992691
     second: Isometric Town Roofing - 143x92_0
+  - first:
+      213: 7158702294767408993
+    second: Isometric Town Roofing - 143x92_1
+  - first:
+      213: -1533404965106784870
+    second: Isometric Town Roofing - 143x92_2
+  - first:
+      213: 6952281951179823127
+    second: Isometric Town Roofing - 143x92_3
+  - first:
+      213: 3134484813332632872
+    second: Isometric Town Roofing - 143x92_4
+  - first:
+      213: 1400804831482723
+    second: Isometric Town Roofing - 143x92_5
+  - first:
+      213: 7612432557578674395
+    second: Isometric Town Roofing - 143x92_6
+  - first:
+      213: 7150869155926223779
+    second: Isometric Town Roofing - 143x92_7
+  - first:
+      213: -4955629788870374484
+    second: Isometric Town Roofing - 143x92_8
+  - first:
+      213: -8389849310631047100
+    second: Isometric Town Roofing - 143x92_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,19 +131,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 276
+        y: 275
         width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b859a67a9bc8b874c835b4ccb0266af7
-      internalID: -875523199
+      spriteID: 378d39980c1702770800000000000000
+      internalID: 8583985961523992691
       vertices: []
       indices: 
       edges: []
@@ -125,20 +152,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 276
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 143
+        y: 275
+        width: 145
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fc0df32a5fc9e248af3d7815730f0fc
-      internalID: 449372727
+      spriteID: 16792640fc1d85360800000000000000
+      internalID: 7158702294767408993
       vertices: []
       indices: 
       edges: []
@@ -147,20 +174,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_2
       rect:
         serializedVersion: 2
-        x: 288
-        y: 276
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 287
+        y: 183
+        width: 145
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e8ca4402859d42049828a91ccfdee4ba
-      internalID: -850604817
+      spriteID: a956dfdfe4048bae0800000000000000
+      internalID: -1533404965106784870
       vertices: []
       indices: 
       edges: []
@@ -170,19 +197,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 184
+        y: 183
         width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a936e319eb60b294eb311097d1c54b80
-      internalID: 866445767
+      spriteID: 718de6e89977b7060800000000000000
+      internalID: 6952281951179823127
       vertices: []
       indices: 
       edges: []
@@ -191,20 +218,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_4
       rect:
         serializedVersion: 2
-        x: 144
-        y: 184
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 143
+        y: 183
+        width: 145
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c3f243fbde34fa047ac5d02b27f55ec1
-      internalID: -2139514192
+      spriteID: 8255c8c945def7b20800000000000000
+      internalID: 3134484813332632872
       vertices: []
       indices: 
       edges: []
@@ -213,20 +240,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_5
       rect:
         serializedVersion: 2
-        x: 288
-        y: 184
+        x: 0
+        y: 91
         width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c6e4c9656099c054da2541accf095728
-      internalID: -445305489
+      spriteID: 363516a460af40000800000000000000
+      internalID: 1400804831482723
       vertices: []
       indices: 
       edges: []
@@ -235,20 +262,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 92
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 143
+        y: 91
+        width: 145
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5727c4865ee03054bbd4d982e8fb0a6f
-      internalID: 550189885
+      spriteID: bd06817241bc4a960800000000000000
+      internalID: 7612432557578674395
       vertices: []
       indices: 
       edges: []
@@ -257,20 +284,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_7
       rect:
         serializedVersion: 2
-        x: 144
-        y: 92
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 287
+        y: 91
+        width: 145
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 74d34b10341090a48b6f11b21abb75df
-      internalID: 1054044769
+      spriteID: 3aba7424c9dfc3360800000000000000
+      internalID: 7150869155926223779
       vertices: []
       indices: 
       edges: []
@@ -279,20 +306,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_8
       rect:
         serializedVersion: 2
-        x: 288
-        y: 92
+        x: 0
+        y: 0
         width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b5b9e7e62b61d4e4cac706722720f901
-      internalID: 2102017875
+      spriteID: cab890c86f01a3bb0800000000000000
+      internalID: -4955629788870374484
       vertices: []
       indices: 
       edges: []
@@ -301,42 +328,20 @@ TextureImporter:
       name: Isometric Town Roofing - 143x92_9
       rect:
         serializedVersion: 2
-        x: 0
+        x: 143
         y: 0
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 145
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ce190dc43ba715a4eb1d14f73b5f7144
-      internalID: 519841834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Isometric Town Roofing - 143x92_10
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 144
-        height: 92
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1670c65bd375dd543a89c7c30cd2190d
-      internalID: 627679340
+      spriteID: 440d7c8d084419b80800000000000000
+      internalID: -8389849310631047100
       vertices: []
       indices: 
       edges: []
@@ -345,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c2da7321376fc464fb0e412551e524aa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -354,18 +359,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Isometric Town Roofing - 143x92_0: -875523199
-      Isometric Town Roofing - 143x92_1: 449372727
-      Isometric Town Roofing - 143x92_10: 627679340
-      Isometric Town Roofing - 143x92_2: -850604817
-      Isometric Town Roofing - 143x92_3: 866445767
-      Isometric Town Roofing - 143x92_4: -2139514192
-      Isometric Town Roofing - 143x92_5: -445305489
-      Isometric Town Roofing - 143x92_6: 550189885
-      Isometric Town Roofing - 143x92_7: 1054044769
-      Isometric Town Roofing - 143x92_8: 2102017875
-      Isometric Town Roofing - 143x92_9: 519841834
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
