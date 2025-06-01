@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -563308649
+  m_SortingLayerID: 1029372517
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -100,5 +100,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acb0f35261528545b6fdc546202b135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  fogMaterial: {fileID: 2100000, guid: d94b492d384db6c4bb6e96851d5105cf, type: 2}
+  Object: {fileID: 0}
