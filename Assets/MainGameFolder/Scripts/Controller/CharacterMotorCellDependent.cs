@@ -9,7 +9,7 @@ using System;
 public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
 {
     private Entity character;
-    private AnimationsSwitcher animationsSwitcher;
+    private AnimationsSoundsCaster animationsSwitcher;
     private float lastStepMoment;
     private float entityMoveTimeout => character.MoveTimeout;
     private float entityMoveSpeed => character.MoveSpeed;
@@ -27,12 +27,12 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
     {
         lastStepMoment = 0f;
         character = GetComponent<Entity>();
-        animationsSwitcher = GetComponent<AnimationsSwitcher>();
+        animationsSwitcher = GetComponent<AnimationsSoundsCaster>();
     }
 
     void Start()
     {
-        aimMovePosition = WorldManager.PlayerStart;
+        aimMovePosition = character.StartPosition;
         transform.position = aimMovePosition;
     }
 
@@ -53,7 +53,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
             startMovePosition = transform.position;
             var calculatedDirection = CalculateMove(controllerDirection);
             aimMovePosition = startMovePosition + calculatedDirection;
-            character.IsMoving = true;
+            character.TrySetIsMoving();
             isMovingToGridline = true;
             animationsSwitcher.SetSpriteWalkingByCellDirections(new Vector2(calculatedDirection.x, calculatedDirection.y));
         }
@@ -97,7 +97,7 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
             }
             else
             {
-                character.IsMoving = false;
+                character.SetNotIsMoving();
                 StartCoroutine(CorotineEnumerator(0.1f, () => {
                     if (!character.IsMoving)
                         animationsSwitcher.SetSpriteStanding();

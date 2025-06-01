@@ -1,3 +1,4 @@
+using ItemBase;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ namespace EntityBase
     public class Player : Entity
     {
         private PlayerController inputManager;
+        private AnimationsSoundsCaster ASCaster;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         new void Awake()
@@ -15,9 +17,25 @@ namespace EntityBase
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
+        {
+            WorldManager.UpdatePlayerLocation(transform.position);
+        }
+
+        public void InteractWith(Item entity)
         {
 
+        }
+
+        public new void TakeDamage(float damage)
+        {
+            base.TakeDamage(damage);
+            if (healthPoints <= 0)
+            {
+                ASCaster.PlaySoundByName("MonsterDeath");
+                ASCaster.PlayAnimationByName("MonsterDeath");
+                gameObject.SetActive(false);
+            }
         }
     }
 }

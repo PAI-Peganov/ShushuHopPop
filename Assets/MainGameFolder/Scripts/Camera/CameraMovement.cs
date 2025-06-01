@@ -15,7 +15,6 @@ public class CameraMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        playerCamera.transform.SetParent(null);
         targetPosition = playerCamera.transform.position;
         isGoing = false;
     }
@@ -31,7 +30,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (isGoing)
             playerCamera.transform.position =
-                Vector3.Lerp(playerCamera.transform.position, targetPosition, cameraSpeed * Time.deltaTime);
+                Vector3.Lerp(playerCamera.transform.position, targetPosition, cameraSpeed * Time.unscaledDeltaTime);
     }
 
     private void UpdateGoing()

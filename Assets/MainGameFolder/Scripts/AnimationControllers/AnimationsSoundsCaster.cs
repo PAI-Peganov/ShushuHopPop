@@ -4,21 +4,20 @@ using UnityEngine;
 using EntityBase;
 using System.Collections.Generic;
 
-public class AnimationsSwitcher : MonoBehaviour
+public class AnimationsSoundsCaster : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private Entity entity;
     private AnimationClip currentClip;
     private AnimationClip nextStanding;
-    [SerializeField]
-    private float movingAnimationSpeed;
-    [SerializeField]
-    private float standingAnimationSpeed;
-    [SerializeField]
-    private AnimationClip[] AnimatedSpritesWalk;
-    [SerializeField]
-    private AnimationClip[] AnimatedSpritesStand;
+    [SerializeField] private float movingAnimationSpeed;
+    [SerializeField] private float standingAnimationSpeed;
+    [SerializeField] private AnimationClip[] AnimatedSpritesWalk;
+    [SerializeField] private AnimationClip[] AnimatedSpritesStand;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] namedSounds;
+    [SerializeField] private AnimationClip[] namedAnimations;
     private readonly Vector2[] eightDirections = new Vector2[]
     {
         new Vector2(0.71f, 0.71f).normalized,
@@ -56,9 +55,14 @@ public class AnimationsSwitcher : MonoBehaviour
         {
             currentClip = sprites.Walk;
             animator.Play(sprites.Walk.name);
-            animator.speed = movingAnimationSpeed * entity.MoveSpeed;
             nextStanding = sprites.Stand;
         }
+        animator.speed = movingAnimationSpeed * entity.MoveSpeed;
+    }
+
+    public void SetAnimationSpeed(float speed)
+    {
+        animator.speed = speed;
     }
 
     public void SetSpriteStanding()
@@ -66,5 +70,32 @@ public class AnimationsSwitcher : MonoBehaviour
         currentClip = nextStanding;
         animator.Play(nextStanding.name);
         animator.speed = standingAnimationSpeed;
+    }
+
+    public void OpenEyes()
+    {
+
+    }
+
+    public void CloseEyes()
+    {
+
+    }
+
+    public void FlashEyesDuration(float duration)
+    {
+
+    }
+
+    public void PlaySoundByName(string name)
+    {
+        var soundShot = namedSounds.FirstOrDefault(x => x.name == name);
+        if (soundShot != null)
+            audioSource.PlayOneShot(soundShot);
+    }
+
+    public void PlayAnimationByName(string name)
+    {
+        animator.Play(name);
     }
 }

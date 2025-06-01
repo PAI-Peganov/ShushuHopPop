@@ -9,17 +9,18 @@ using UnityEngine.EventSystems;
 public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 {
     private Entity character;
-    private AnimationsSwitcher animationsSwitcher;
+    private AnimationsSoundsCaster animationsSwitcher;
     private float lastStepMoment;
+    private float lastDashMoment;
     private float entityMoveTimeout => character.MoveTimeout;
     private float entityMoveSpeed => character.MoveSpeed;
 
     private Vector3 startMovePosition;
     private Vector3 aimMovePosition;
     private Vector3 moveDirection;
-    public Vector3 MoveDirection => new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
 
-    public float CurrentTime => Time.realtimeSinceStartup;
+    public Vector3 MoveDirection => new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
+    public float CurrentTime => Time.time;
 
     private readonly Vector2[] eightDirections = new Vector2[]
     {
@@ -36,13 +37,14 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     void Awake()
     {
         lastStepMoment = 0f;
+        lastDashMoment = 0f;
         character = GetComponent<Entity>();
-        animationsSwitcher = GetComponent<AnimationsSwitcher>();
+        animationsSwitcher = GetComponent<AnimationsSoundsCaster>();
     }
 
     void Start()
     {
-        aimMovePosition = WorldManager.PlayerStart;
+        aimMovePosition = character.StartPosition;
         transform.position = aimMovePosition;
         moveDirection = new Vector3(1.7f, 1f, 0f);
         aimMovePosition += moveDirection;
@@ -56,37 +58,53 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 
     public void SetCharacterMove(params Vector2[] controllerDirections)
     {
+        if (character.IsDashing)
+            return;
         var controllerDirection = controllerDirections
             .FirstOrDefault(dir => dir.magnitude > 0.1f);
         if (controllerDirection.magnitude > 0.1f)
         {
-            var calculatedDirection = CalculateMove(controllerDirection);
-            if (Vector3.Dot(calculatedDirection.normalized, moveDirection.normalized) > 0.9f)
-                lastStepMoment = CurrentTime;
-            if (CurrentTime - lastStepMoment > 0.05f)
+            if (CurrentTime > lastStepMoment + 0.15f)
             {
-                moveDirection = calculatedDirection;
-                animationsSwitcher.SetSpriteWalkingByEightDirections(
-                    new Vector2(moveDirection.x, moveDirection.y));
+                moveDirection = CalculateMove(controllerDirection);
+                lastStepMoment = CurrentTime;
             }
             startMovePosition = transform.position;
             aimMovePosition = startMovePosition + moveDirection;
-            if (!character.IsMoving)
-            {
-                character.IsMoving = true;
+            if (character.TrySetIsMoving())
                 animationsSwitcher.SetSpriteWalkingByEightDirections(
                     new Vector2(moveDirection.x, moveDirection.y));
-            }
+            else
+                animationsSwitcher.SetSpriteStanding();
         }
         else if (character.IsMoving)
         {
-            character.IsMoving = false;
-            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5, () =>
-            {
-                if (!character.IsMoving)
-                    animationsSwitcher.SetSpriteStanding();
-            }));
+            character.SetNotIsMoving();
+            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5,
+                () =>
+                {
+                    if (!character.IsMoving)
+                        animationsSwitcher.SetSpriteStanding();
+                }));
         }
+    }
+
+    public bool TryCallCharacterDash()
+    {
+        if (character.IsDashing)
+            lastDashMoment = CurrentTime;
+        if (lastDashMoment + character.DashCalldownTime < CurrentTime && character.TrySetIsDashing())
+        {
+            animationsSwitcher.SetSpriteStanding();
+            StartCoroutine(CorotineEnumerator(character.DashPrepaireTime,
+                () =>
+                {
+                    animationsSwitcher.SetSpriteWalkingByEightDirections(moveDirection, true);
+                    animationsSwitcher.SetAnimationSpeed(0.5f);
+                }));
+            return true;
+        }
+        return false;
     }
 
     private IEnumerator CorotineEnumerator(float delay, Action action)
@@ -97,12 +115,21 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 
     private void TryMoveCharacter()
     {
-        if (character.IsMoving)
+        if (character.IsMoving || character.IsDashing)
+        {
             transform.position += moveDirection * entityMoveSpeed * Time.deltaTime;
+            WorldManager.UpdatePlayerLocation(transform.position);
+        }
     }
 
-    private Vector3 CalculateMove(Vector2 controllerDirection) =>
+    private Vector3 CalculateMoveEightDirections(Vector2 controllerDirection) =>
         eightDirections.OrderByDescending(dir => (dir + controllerDirection).magnitude)
         .Select(vec => new Vector3(vec.x * 1.7f, vec.y, 0))
         .First();
+
+    private Vector3 CalculateMove(Vector2 controllerDirection)
+    {
+        var vec = controllerDirection.normalized;
+        return new Vector3(vec.x * 1.7f, vec.y, 0);
+    }
 }

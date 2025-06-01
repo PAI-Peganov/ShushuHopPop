@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Mushroom
   layers:
   - Default
   - TransparentFX
@@ -65,8 +67,8 @@ TagManager:
   - name: UpperDecorations
     uniqueID: 2326989845
     locked: 0
-  - name: Effects
-    uniqueID: 3731658647
+  - name: UI
+    uniqueID: 2649493177
     locked: 0
   - name: Menu
     uniqueID: 2043730013
