@@ -20,7 +20,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     private Vector3 moveDirection;
 
     public Vector3 MoveDirection => new Vector3(moveDirection.x, moveDirection.y, moveDirection.z);
-    public float CurrentTime => Time.realtimeSinceStartup;
+    public float CurrentTime => Time.time;
 
     private readonly Vector2[] eightDirections = new Vector2[]
     {
@@ -72,10 +72,10 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
             startMovePosition = transform.position;
             aimMovePosition = startMovePosition + moveDirection;
             if (character.TrySetIsMoving())
-            {
                 animationsSwitcher.SetSpriteWalkingByEightDirections(
                     new Vector2(moveDirection.x, moveDirection.y));
-            }
+            else
+                animationsSwitcher.SetSpriteStanding();
         }
         else if (character.IsMoving)
         {

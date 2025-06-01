@@ -40,18 +40,14 @@ public class MonsterAI : MonoBehaviour
              Vector3.Distance(transform.position, homePosition) < homeDefendingRadius) ||
             Vector3.Distance(homePosition, WorldManager.PlayerPosition) < homeDefendingRadius)
         {
-            Debug.Log("Player!!!");
-            Debug.Log(characterMotor.CurrentTime);
             animator.OpenEyes();
             targetPosition = WorldManager.PlayerPosition;
             if (characterMotor.TryCallCharacterDash())
                 animator.FlashEyesDuration(monster.DashPrepaireTime);
-            StartCoroutine(SetCoroutine(TryFindNewTarget, Time.deltaTime * 3));
+            StartCoroutine(SetCoroutine(TryFindNewTarget, 0.02f));
         }
         else
         {
-            Debug.Log("PlayerNotFound");
-            Debug.Log(characterMotor.CurrentTime);
             animator.CloseEyes();
             targetPosition = CalculateNextTargetPosition();
             StartCoroutine(SetCoroutine(TryFindNewTarget,

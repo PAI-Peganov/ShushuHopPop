@@ -119,7 +119,9 @@ MonoBehaviour:
   defaultResistanse: 0
   id: monster
   startCell: {x: 1, y: 1}
-  atackCalldown: 0
+  attackCalldown: 0
+  attackedCalldown: 0
+  ASCaster: {fileID: 0}
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +183,9 @@ MonoBehaviour:
   - {fileID: 7400000, guid: bbd0ccfbcf79acf42a6df25a68190d9f, type: 2}
   - {fileID: 7400000, guid: c411561ecfc4f0a4c90b14a6d3afb677, type: 2}
   - {fileID: 7400000, guid: cc4c7474743459e49a9b62a9c1957546, type: 2}
+  audioSource: {fileID: 0}
+  namedSounds: []
+  namedAnimations: []
 --- !u!58 &6110489539001176163
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -11,14 +11,13 @@ public class AnimationsSoundsCaster : MonoBehaviour
     private Entity entity;
     private AnimationClip currentClip;
     private AnimationClip nextStanding;
-    [SerializeField]
-    private float movingAnimationSpeed;
-    [SerializeField]
-    private float standingAnimationSpeed;
-    [SerializeField]
-    private AnimationClip[] AnimatedSpritesWalk;
-    [SerializeField]
-    private AnimationClip[] AnimatedSpritesStand;
+    [SerializeField] private float movingAnimationSpeed;
+    [SerializeField] private float standingAnimationSpeed;
+    [SerializeField] private AnimationClip[] AnimatedSpritesWalk;
+    [SerializeField] private AnimationClip[] AnimatedSpritesStand;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] namedSounds;
+    [SerializeField] private AnimationClip[] namedAnimations;
     private readonly Vector2[] eightDirections = new Vector2[]
     {
         new Vector2(0.71f, 0.71f).normalized,
@@ -86,5 +85,17 @@ public class AnimationsSoundsCaster : MonoBehaviour
     public void FlashEyesDuration(float duration)
     {
 
+    }
+
+    public void PlaySoundByName(string name)
+    {
+        var soundShot = namedSounds.FirstOrDefault(x => x.name == name);
+        if (soundShot != null)
+            audioSource.PlayOneShot(soundShot);
+    }
+
+    public void PlayAnimationByName(string name)
+    {
+        animator.Play(name);
     }
 }

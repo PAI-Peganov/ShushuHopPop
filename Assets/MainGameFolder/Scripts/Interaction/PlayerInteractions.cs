@@ -1,3 +1,5 @@
+using EntityBase;
+using ItemBase;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -5,10 +7,12 @@ using UnityEngine.Rendering.Universal;
 public class PlayerInteractions : MonoBehaviour
 {
     private PlayerFightSystem fightSystem;
+    private Player player;
 
     void Awake()
     {
         fightSystem = GetComponent<PlayerFightSystem>();
+        player = GetComponent<Player>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -35,8 +39,11 @@ public class PlayerInteractions : MonoBehaviour
         {
             case "Enemy":
                 var enemy = collision.gameObject.GetComponent<Monster>();
-                if (enemy.CanAtack)
+                if (enemy.TryStartAttack())
                     fightSystem.StartFightMonster(enemy);
+                break;
+            case "Interactable":
+                player.InteractWith(collision.gameObject.GetComponent<Item>());
                 break;
             default:
                 break;

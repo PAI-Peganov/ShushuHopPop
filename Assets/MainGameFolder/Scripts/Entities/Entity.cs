@@ -34,7 +34,8 @@ namespace EntityBase
         public bool IsMoving { private set; get; }
         public bool IsDashing { private set; get; }
         public bool IsWaiting { private set; get; }
-        public float AtackDamage => defaultDamage;
+        public float AttackDamage => defaultDamage;
+        public float Resistance => defaultResistanse;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         protected void Awake()
         {
@@ -96,7 +97,12 @@ namespace EntityBase
             MoveSpeed = defaultMoveSpeed;
         }
 
-        private IEnumerator SetCoroutine(Action action, float delay)
+        public void SetIsNotWaiting()
+        {
+            IsWaiting = false;
+        }
+
+        protected IEnumerator SetCoroutine(Action action, float delay)
         {
             yield return new WaitForSeconds(delay);
             action();

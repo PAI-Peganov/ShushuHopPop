@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private PlayerInput.PlayerActions playerActions;
     private ICharacterMotor playerMotor;
 
+    public bool AttackButtonClicked => playerActions.Attack.IsPressed();
+
     void Awake()
     {
         playerInput = new PlayerInput();
