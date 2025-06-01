@@ -15,8 +15,8 @@ namespace MainGameFolder.Scripts.UI.Quest
                     "Переплыть реку",
                     new List<QuestTask>
                     {
-                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", "test"),
-                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", "test")
+                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", 1),
+                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", 2)
                     }
                 )
             },
@@ -25,8 +25,8 @@ namespace MainGameFolder.Scripts.UI.Quest
                     "Найти ключ",
                     new List<QuestTask>
                     {
-                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", "test"),
-                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", "test")
+                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", 1),
+                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", 2)
                     }
                 )
             },
@@ -35,18 +35,17 @@ namespace MainGameFolder.Scripts.UI.Quest
                     "Найти вакцину",
                     new List<QuestTask>
                     {
-                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", "test"),
-                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", "test")
+                        new QuestTask("Найдите способ выбраться из заточения в ловушке болот – время на исходе", 1),
+                        new QuestTask("Немедленно покиньте болота, прежде чем они окончательно поглотят вас.", 2)
                     }
                 )
             }
         };
-        
-        private QuestListManager _questListManager;
+
+        [SerializeField] private QuestListManager questListManager;
 
         private void Start()
         {
-            _questListManager = GetComponent<QuestListManager>();
             SetupQuestsByScene(SceneManager.GetActiveScene().buildIndex);
         }
 
@@ -55,9 +54,7 @@ namespace MainGameFolder.Scripts.UI.Quest
             var quest = _quests.GetValueOrDefault(sceneNumber);
             if (quest == null)
                 throw new Exception("Scene not found");
-            Debug.Log(quest.Quests);
-            _questListManager.SetupQuests(quest.Quests);
-            _questListManager.ShowQuestUI();
+            questListManager.SetupQuests(quest.Quests);
         }
     }
 }

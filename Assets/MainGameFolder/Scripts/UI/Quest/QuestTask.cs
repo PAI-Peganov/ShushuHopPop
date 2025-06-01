@@ -4,12 +4,13 @@ namespace MainGameFolder.Scripts.UI.Quest
     {
         public string QuestText { get; private set; }
         
-        public string key { get; private set; }
+        public int Order { get; private set; }
         public bool IsDone { get; private set; }
 
-        public QuestTask(string questText, string key)
+        public QuestTask(string questText, int order)
         {
             QuestText = questText;
+            Order = order;
         }
 
         public void MakeDone()

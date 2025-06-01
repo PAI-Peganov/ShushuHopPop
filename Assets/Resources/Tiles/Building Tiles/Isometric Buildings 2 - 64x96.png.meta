@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Isometric Buildings 2 - 64x96_0: -4873193004133875349
+      Isometric Buildings 2 - 64x96_1: 8135675981524733434
+      Isometric Buildings 2 - 64x96_2: -8035953412460044570
+      Isometric Buildings 2 - 64x96_3: 697550420448353967
+      Isometric Buildings 2 - 64x96_4: -2396938402257986459
+      Isometric Buildings 2 - 64x96_5: 6737226054700847574
+      Isometric Buildings 2 - 64x96_6: -7465112591393572084
+      Isometric Buildings 2 - 64x96_7: 7942633493903865031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -123,6 +123,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -359,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Isometric Town Roofing - 143x92_0: 8583985961523992691
+      Isometric Town Roofing - 143x92_1: 7158702294767408993
+      Isometric Town Roofing - 143x92_2: -1533404965106784870
+      Isometric Town Roofing - 143x92_3: 6952281951179823127
+      Isometric Town Roofing - 143x92_4: 3134484813332632872
+      Isometric Town Roofing - 143x92_5: 1400804831482723
+      Isometric Town Roofing - 143x92_6: 7612432557578674395
+      Isometric Town Roofing - 143x92_7: 7150869155926223779
+      Isometric Town Roofing - 143x92_8: -4955629788870374484
+      Isometric Town Roofing - 143x92_9: -8389849310631047100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
