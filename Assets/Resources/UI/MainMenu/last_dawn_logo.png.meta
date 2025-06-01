@@ -222,10 +222,10 @@ TextureImporter:
       name: last_down_logo_4
       rect:
         serializedVersion: 2
-        x: 80
+        x: 78
         y: 66
-        width: 51
-        height: 76
+        width: 58
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
