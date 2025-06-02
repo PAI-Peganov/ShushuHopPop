@@ -1,10 +1,9 @@
 using EntityBase;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
 {

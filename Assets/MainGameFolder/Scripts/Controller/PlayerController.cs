@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using EntityBase;
-using static UnityEditor.PlayerSettings;
 
 public class PlayerController : MonoBehaviour
 {

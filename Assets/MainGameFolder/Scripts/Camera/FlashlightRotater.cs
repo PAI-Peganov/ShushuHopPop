@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering.Universal;
 
 public class FlashlightRotater : MonoBehaviour

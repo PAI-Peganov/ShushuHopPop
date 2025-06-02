@@ -1,6 +1,4 @@
-﻿using Mono.Cecil;
-using UnityEngine;
-using UnityEngine.Rendering;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -18,26 +16,26 @@ namespace MainGameFolder.Scripts.UI.MainMenu
         [SerializeField]
         private Canvas History;
 
-        private int history_label = 0;
+        private int historyLabel = 0;
 
         // Starts the game from saved state
         public void Play()
         { 
-            history_label = 1;
+            historyLabel = 1;
         }
 
         void Update()
         {
 
-            History.enabled = (history_label == 1);
+            History.enabled = (historyLabel == 1);
             
 
-            if (history_label > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+            if (historyLabel > 0 && Input.GetKeyDown(KeyCode.Mouse0))
             {
-                history_label += 1;
+                historyLabel += 1;
             }
 
-            if (history_label == 2)
+            if (historyLabel == 2)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }

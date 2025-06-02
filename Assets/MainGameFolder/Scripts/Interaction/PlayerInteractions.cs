@@ -1,9 +1,7 @@
 using EntityBase;
 using MainGameFolder.Scripts.UI.Quest;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using static UnityEditor.Progress;
 
 public class PlayerInteractions : MonoBehaviour
 {
