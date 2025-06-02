@@ -150,6 +150,7 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
         
         private void TryLoadNextLevel()
         {
+            ClearQuests();
             StartCoroutine(NextLevelCoroutine());
         }
 
