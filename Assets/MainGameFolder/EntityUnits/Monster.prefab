@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb61fd9405bda4c9ec7dff5b5c603d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  homeCell: {x: 2, y: 2}
+  homeCell: {x: -3, y: -8}
   homeDefendingRadius: 1.5
   playerDetectingRadius: 1.5
   targetSwitchTime: 1

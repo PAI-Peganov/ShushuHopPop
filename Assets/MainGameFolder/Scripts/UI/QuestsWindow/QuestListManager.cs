@@ -5,39 +5,48 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace MainGameFolder.Scripts.UI.QuestsWindow
+namespace MainGameFolder.Scripts.UI.Quest
 {
     public class QuestListManager : MonoBehaviour
     {
-        private Canvas _questsCanvas;
-
-        private Image _questsBackground;
+        [SerializeField] private Canvas questCanvas;
+        [SerializeField] string nextSceneName;
 
         private readonly Dictionary<int, (QuestTask task, GameObject gameObject)> _quests = new();
 
-        private bool _isShown = true;
+        private bool _isShown;
 
-        private void Awake()
+        private QuestTask _currentQuest;
+
+        private void Start()
         {
-            _questsCanvas = GetComponent<Canvas>();
-            WorldManager.AddQuestListManager(this);
-            _questsBackground = GetComponentInChildren<Image>();
-            SetupQuests();
-            ShowQuestUI();
+            HideQuestUI();
         }
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                _isShown = false;
+                HideQuestUI();
+            }
+
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 if (_isShown)
+                {
+                    _isShown = false;
                     HideQuestUI();
+                }
                 else
+                {
+                    _isShown = true;
                     ShowQuestUI();
+                }
             }
         }
 
-        private static string InsertLineBreaks(string input, int maxLineLength = 40)
+        private static string InsertLineBreaks(string input, int maxLineLength = 50)
         {
             var lastBreak = 0;
             while (lastBreak + maxLineLength < input.Length)
@@ -58,30 +67,25 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
             return string.Concat(input.Select(c => $"{c}{strikethroughChar}"));
         }
 
-        private void SetupQuests()
+        public void SetupQuests(QuestTask[] quests)
         {
-            var quests = GetComponentsInChildren<QuestTask>();
-            if (quests == null || quests.Length == 0)
-            {
-                Debug.LogException(new Exception("Quests not found"));
-                return;
-            }
-
-            foreach (var quest in quests.OrderBy(quest => quest.Order))
-                CreateQuestText(quest, new Vector2(0, -75 * (quest.Order - 1)), quest.Order == 1);
+            for (var i = 0; i < quests.Length; i++)
+                CreateQuestText(quests[i], new Vector2(0, -125 * i), i == 0);
+            _currentQuest = quests[0];
         }
 
         private void CreateQuestText(QuestTask quest, Vector2 offset, bool isVisible = true)
         {
             var textObj = new GameObject($"Quest number {quest.Order}");
-            textObj.transform.SetParent(_questsBackground.transform, false);
+            textObj.transform.SetParent(questCanvas.transform, false);
             if (!isVisible)
                 textObj.SetActive(false);
 
+
             var text = textObj.AddComponent<Text>();
             text.text = InsertLineBreaks(quest.QuestText);
-            text.fontSize = 24;
-            text.color = Color.white * 0.8f;
+            text.fontSize = 40;
+            text.color = Color.black;
             text.alignment = TextAnchor.UpperLeft;
             text.horizontalOverflow = HorizontalWrapMode.Overflow;
             text.verticalOverflow = VerticalWrapMode.Overflow;
@@ -89,79 +93,68 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
 
             var rectTransform = text.GetComponent<RectTransform>();
             // Смещение от левого верхнего угла
-            rectTransform.anchoredPosition = new Vector2(-70, 125) + offset;
+            rectTransform.anchoredPosition = new Vector2(-400, 300) + offset;
             // Text size
-            rectTransform.sizeDelta = new Vector2(400, 40);
+            rectTransform.sizeDelta = new Vector2(400, 50);
 
             _quests.Add(quest.Order, (quest, textObj));
         }
 
-        private void ShowNextQuest()
+        private bool TryShowNextQuest()
         {
-            var areAllCompleted = _quests.All(q => q.Value.task.IsDone);
-            if (areAllCompleted)
+            if (_currentQuest is null)
+                return false;
+            if (!_quests.TryGetValue(_currentQuest.Order + 1, out var quest))
             {
-                ClearQuests();
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                return false;
+                throw new Exception("Quest not found: " + _currentQuest.Order + 1);
             }
-
-            QuestTask nextQuest = null;
-
-            foreach (var quest in _quests)
-            {
-                if (!quest.Value.task.IsDone)
-                {
-                    nextQuest = quest.Value.task;
-                    break;
-                }
-
-                if (quest.Value.task.IsDone && !quest.Value.gameObject.activeInHierarchy)
-                    quest.Value.gameObject.SetActive(true);
-            }
-
-            nextQuest?.gameObject.SetActive(true);
-            ShowQuestUI();
+            quest.gameObject.SetActive(true);
+            _currentQuest = quest.task;
+            return true;
         }
 
-        private void ClearQuests()
+
+        public void ClearQuests()
         {
             foreach (var quest in _quests.Values)
                 Destroy(quest.gameObject);
             _quests.Clear();
         }
 
-        public void TryMarkQuestAsCompleted(string questName)
+        public bool TryMarkQuestAsCompleted(int order)
         {
-            var quest = _quests.FirstOrDefault(q =>
-                q.Value.task.Name == questName).Value;
-
-            if (quest.task.PreviousQuestTask != null)
-            {
-                if (!quest.task.PreviousQuestTask.IsDone)
-                {
-                    Debug.LogError("Previous quest is not completed: " + quest.task.PreviousQuestTask);
-                    return;
-                }
-            }
-
+            if (_currentQuest.Order != order)
+                return false;
+            if (!_quests.TryGetValue(order, out var quest))
+                throw new Exception("Quest not found: " + order);
             quest.task.MakeDone();
-
-            if (!quest.task.IsDone) return;
             var text = quest.gameObject.GetComponent<Text>();
             text.text = Strikethrough(text.text);
-            ShowNextQuest();
+            if(!TryShowNextQuest())
+                TryLoadNextLevel();
+            return true;
         }
 
-        private void ShowQuestUI()
+        public void TryLoadNextLevel()
         {
-            _isShown = true;
-            _questsCanvas.enabled = true;
+            StartCoroutine(NextLevelCoroutine());
         }
 
-        private void HideQuestUI()
+        private IEnumerator<WaitForSeconds> NextLevelCoroutine()
         {
-            _isShown = false;
-            _questsCanvas.enabled = false;
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(nextSceneName);
+        }
+
+        public void ShowQuestUI()
+        {
+            questCanvas.enabled = true;
+        }
+
+        public void HideQuestUI()
+        {
+            questCanvas.enabled = false;
         }
     }
 }

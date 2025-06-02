@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using EntityBase;
-using static UnityEditor.PlayerSettings;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private ICharacterMotor playerMotor;
 
     public bool AttackButtonClicked => playerActions.Attack.IsPressed();
+    public bool InteractButtonClicked => playerActions.Interact.IsPressed();
 
     void Awake()
     {

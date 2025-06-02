@@ -1,18 +1,22 @@
 using EntityBase;
-using ItemBase;
-using System.Linq;
+using MainGameFolder.Scripts.UI.Quest;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private QuestListManager questListManager;
     private PlayerFightSystem fightSystem;
     private Player player;
+    private PlayerController playerController;
+    private AnimationsSoundsCaster ASCaster;
 
     void Awake()
     {
         fightSystem = GetComponent<PlayerFightSystem>();
         player = GetComponent<Player>();
+        playerController = GetComponent<PlayerController>();
+        ASCaster = GetComponent<AnimationsSoundsCaster>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -43,7 +47,12 @@ public class PlayerInteractions : MonoBehaviour
                     fightSystem.StartFightMonster(enemy);
                 break;
             case "Interactable":
-                player.InteractWith(collision.gameObject.GetComponent<Item>());
+                if (playerController.InteractButtonClicked)
+                {
+                    ASCaster.PlaySoundByName(collision.gameObject.GetComponent<Item>().InteractionSoundName);
+                    foreach (var num in collision.gameObject.GetComponent<Item>().QuestsNumbers)
+                        questListManager.TryMarkQuestAsCompleted(num);
+                }
                 break;
             default:
                 break;
