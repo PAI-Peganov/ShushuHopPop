@@ -13,6 +13,8 @@ public static class WorldManager
     public static Vector3 PlayerPosition { get; private set; }
     
     private static QuestListManager _questListManager;
+    
+    private static SubtilesController _subtitlesController;
 
     public static void AddNewMap(Map map)
     {
@@ -24,6 +26,11 @@ public static class WorldManager
     public static void AddQuestListManager(QuestListManager questListManager)
     {
         _questListManager = questListManager;
+    }
+    
+    public static void AddSubtitlesController(SubtilesController subtitlesController)
+    {
+        _subtitlesController = subtitlesController;
     }
 
     private static void MakeMoveVectors()
@@ -61,6 +68,9 @@ public static class WorldManager
             Debug.LogException(new Exception("Quest name is null"));
             return;
         }
-        _questListManager.TryMarkQuestAsCompleted(name);
+
+        if (_questListManager.TryMarkQuestAsCompleted(name, out var task))
+            _subtitlesController.PlaySubtiles(task.Name);
+        
     }
 }

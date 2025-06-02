@@ -26,6 +26,7 @@ public class SubtilesController : MonoBehaviour
 
     void Start()
     {
+        WorldManager.AddSubtitlesController(this);
         var text = srtFile.text;
         string tag = null;
         subtitles = new Dictionary<string, List<SubtitleEntry>>();
@@ -45,7 +46,7 @@ public class SubtilesController : MonoBehaviour
             }
         }
         
-        playSubtiles("start");
+        PlaySubtiles("start");
     }
 
     private IEnumerator SubtilesWriter(string tag)
@@ -75,7 +76,7 @@ public class SubtilesController : MonoBehaviour
         subtitleText.text = subtitleText.text + Symbol;
     }
 
-    public void playSubtiles(string tag)
+    public void PlaySubtiles(string tag)
     {
         if (subtitles.ContainsKey(tag))
             StartCoroutine(SubtilesWriter(tag));

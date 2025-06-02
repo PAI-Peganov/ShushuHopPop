@@ -124,11 +124,15 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
             _quests.Clear();
         }
 
-        public bool TryMarkQuestAsCompleted(string questName)
+        public bool TryMarkQuestAsCompleted(string questName, out QuestTask questTask)
         {
             var quest = _quests.FirstOrDefault(q =>
                 q.Value.task.Name == questName).Value;
+            questTask = quest.task;
 
+            if (quest.task.IsDone)
+                return false;
+            
             if (quest.task.PreviousQuestTask != null)
             {
                 if (!quest.task.PreviousQuestTask.IsDone)
