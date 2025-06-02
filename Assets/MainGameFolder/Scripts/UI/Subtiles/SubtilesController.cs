@@ -8,7 +8,8 @@ public class SubtitleEntry
 {
     public float Duration { set; get; }
     public string Text { set; get; }
-    public SubtitleEntry(float duration, string text) 
+
+    public SubtitleEntry(float duration, string text)
     {
         Text = text;
         Duration = duration;
@@ -16,13 +17,13 @@ public class SubtitleEntry
 }
 
 public class SubtilesController : MonoBehaviour
-{ 
-    [SerializeField]
-    private TextMeshProUGUI subtitleText;
-    [SerializeField]
-    private TextAsset srtFile;
+{
+    [SerializeField] private TextMeshProUGUI subtitleText;
+    [SerializeField] private TextAsset srtFile;
 
     private Dictionary<string, List<SubtitleEntry>> subtitles;
+
+    private Coroutine _lastSubtitleCoroutine;
 
     void Start()
     {
@@ -37,15 +38,17 @@ public class SubtilesController : MonoBehaviour
             {
                 tag = line.Substring(1);
                 subtitles[tag] = new List<SubtitleEntry>();
-                
             }
             else if (tag != null && line.Length > 1)
             {
                 var splitedLine = line.Split(' ', 2);
-                subtitles[tag].Add(new SubtitleEntry(float.Parse(splitedLine[0], System.Globalization.CultureInfo.InvariantCulture), splitedLine[1]));
+                subtitles[tag]
+                    .Add(new SubtitleEntry(
+                        float.Parse(splitedLine[0], System.Globalization.CultureInfo.InvariantCulture),
+                        splitedLine[1]));
             }
         }
-        
+
         PlaySubtiles("start");
     }
 
@@ -60,10 +63,12 @@ public class SubtilesController : MonoBehaviour
                 AddSymbolSubtiles(text[i]);
                 yield return new WaitForSeconds(halfDuration / text.Length);
             }
+
             yield return new WaitForSeconds(halfDuration);
             ClearSubtiles();
         }
-        yield return new WaitForSeconds(0.1f);  
+
+        yield return new WaitForSeconds(0.1f);
     }
 
     private void ClearSubtiles()
@@ -79,7 +84,11 @@ public class SubtilesController : MonoBehaviour
     public void PlaySubtiles(string tag)
     {
         if (subtitles.ContainsKey(tag))
-            StartCoroutine(SubtilesWriter(tag));
+        {
+            if (_lastSubtitleCoroutine != null)
+                StopCoroutine(_lastSubtitleCoroutine);
+            _lastSubtitleCoroutine = StartCoroutine(SubtilesWriter(tag));
+        }
         else
             Debug.Log($"subtiles associated with {tag} dont exists");
     }

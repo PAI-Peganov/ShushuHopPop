@@ -160,7 +160,7 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
 
         private IEnumerator<WaitForSeconds> NextLevelCoroutine()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(10);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
