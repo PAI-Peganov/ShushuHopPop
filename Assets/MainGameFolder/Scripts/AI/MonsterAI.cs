@@ -5,9 +5,10 @@ using Random = UnityEngine.Random;
 
 public class MonsterAI : MonoBehaviour
 {
-    [SerializeField] private Vector2Int homeCell;
-    [SerializeField] private float homeDefendingRadius;
+    //[SerializeField] private Vector2Int homeCell;
+    [SerializeField] private float playerKeepingRadius;
     [SerializeField] private float playerDetectingRadius;
+    [SerializeField] private float homeRadius;
     [SerializeField] private float targetSwitchTime;
     [SerializeField] private float targetSwitchTimeDelta;
     private Monster monster;
@@ -21,8 +22,8 @@ public class MonsterAI : MonoBehaviour
         monster = GetComponent<Monster>();
         characterMotor = GetComponent<CharacterMotorIndependent>();
         animator = GetComponent<AnimationsSoundsCaster>();
-        homePosition = WorldManager.GetWorldPositionFromCell(homeCell);
-        TryFindNewTarget();
+        homePosition = transform.position;
+        StartCoroutine(TryFindNewTarget());
     }
 
     // Update is called once per frame
@@ -34,32 +35,42 @@ public class MonsterAI : MonoBehaviour
     private Vector2 CalculateDeltaMove() =>
         new Vector2(targetPosition.x - transform.position.x, targetPosition.y - transform.position.y);
 
-    private void TryFindNewTarget()
+    private IEnumerator TryFindNewTarget()
     {
-        if ((Vector3.Distance(transform.position, WorldManager.PlayerPosition) < playerDetectingRadius &&
-             Vector3.Distance(transform.position, homePosition) < homeDefendingRadius) ||
-            Vector3.Distance(homePosition, WorldManager.PlayerPosition) < homeDefendingRadius)
+        yield return new WaitForSeconds(0.5f);
+        while (monster.enabled)
         {
-            animator.OpenEyes();
-            targetPosition = WorldManager.PlayerPosition;
-            if (characterMotor.TryCallCharacterDash())
-                animator.FlashEyesDuration(monster.DashPrepaireTime);
-            StartCoroutine(SetCoroutine(TryFindNewTarget, 0.02f));
-        }
-        else
-        {
-            animator.CloseEyes();
-            targetPosition = CalculateNextTargetPosition();
-            StartCoroutine(SetCoroutine(TryFindNewTarget,
-                Random.Range(targetSwitchTime - targetSwitchTimeDelta, targetSwitchTime + targetSwitchTimeDelta)));
+            var distanceToPlayer = Distance(transform.position, WorldManager.PlayerPosition);
+            if (distanceToPlayer < playerDetectingRadius)
+            {
+                animator.OpenEyes();
+                targetPosition = WorldManager.PlayerPosition;
+                homePosition = targetPosition;
+                Debug.Log(WorldManager.PlayerPosition);
+                if (distanceToPlayer < playerKeepingRadius)
+                    if (characterMotor.TryCallCharacterDash())
+                        animator.FlashEyesDuration(monster.DashPrepaireTime);
+                yield return new WaitForFixedUpdate();
+            }
+            else
+            {
+                animator.CloseEyes();
+                targetPosition = CalculateNextTargetPosition();
+                yield return new WaitForSeconds(Random.Range(
+                    targetSwitchTime - targetSwitchTimeDelta,
+                    targetSwitchTime + targetSwitchTimeDelta));
+            }
         }
     }
 
+    private float Distance(Vector3 a, Vector3 b) =>
+        Vector3.Scale(a - b, new Vector3(1f / 1.7f, 1f, 0f)).magnitude;
+
     private Vector3 CalculateNextTargetPosition()
     {
-        if (Vector3.Distance(transform.position, homePosition) > homeDefendingRadius)
+        if (Distance(homePosition, transform.position) > homeRadius)
             return homePosition;
-        var vec = characterMotor.MoveDirection + Random.onUnitSphere * 0.3f;
+        var vec = characterMotor.MoveDirection + Random.onUnitSphere * 0.8f;
         vec.z = 0;
         return transform.position + vec.normalized;
     }

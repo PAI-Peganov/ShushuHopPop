@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3032518547708327219}
   - component: {fileID: 2554397498146896436}
   - component: {fileID: 2557944517638308877}
-  - component: {fileID: 2753376418372883503}
   - component: {fileID: 6357472686086817665}
   - component: {fileID: 3506596165022255510}
   - component: {fileID: 5760973780949400244}
@@ -115,18 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCellDependent: 0
---- !u!114 &2753376418372883503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4037545643643715926}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d4cf0691871784a97e5fecd139f8d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6357472686086817665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +149,6 @@ MonoBehaviour:
   defaultDamage: 20
   defaultResistanse: 0.5
   id: player
-  startCell: {x: 0, y: 0}
 --- !u!114 &5760973780949400244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b254ff476231b4f87b611e44bd7017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questListManager: {fileID: 0}
 --- !u!114 &-5336218688890820070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +213,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.16
+  m_Radius: 0.17
 --- !u!50 &4653984359858880136
 Rigidbody2D:
   serializedVersion: 5
@@ -239,7 +226,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 80
   m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -266,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2450dc00a864c48a150ab2178ee3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingOffset: 0.7
-  cameraSpeed: 0.7
+  movingOffset: 0.8
+  cameraSpeed: 0.8
   playerCamera: {fileID: 6371957538165028013, guid: 81364ff8b39ed9a4d9d25599d6591a22, type: 3}
 --- !u!114 &7916647781791330642
 MonoBehaviour:
@@ -309,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingAnimationSpeed: 0.3
   standingAnimationSpeed: 0.3
+  attackingAnimationSpeed: 0.3
   AnimatedSpritesWalk:
   - {fileID: 7400000, guid: 4ec26290fa829c345ab334e454027a5a, type: 2}
   - {fileID: 7400000, guid: a1b370dd104a84f40a04df611111603a, type: 2}
@@ -327,6 +315,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: bbd0ccfbcf79acf42a6df25a68190d9f, type: 2}
   - {fileID: 7400000, guid: c411561ecfc4f0a4c90b14a6d3afb677, type: 2}
   - {fileID: 7400000, guid: cc4c7474743459e49a9b62a9c1957546, type: 2}
+  AnimatedSpritesAttack: []
   audioSource: {fileID: 0}
   namedSounds: []
   namedAnimations: []

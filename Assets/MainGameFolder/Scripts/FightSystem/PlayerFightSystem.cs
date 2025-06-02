@@ -70,6 +70,7 @@ public class PlayerFightSystem : MonoBehaviour
 
         current.transform.localScale = Vector3.one * 30;
         spriteRenderer.color = new Color(0f, 1f, 1f, 1f);
+        monster.ASCaster.SetSpriteAttack();
 
         yield return null;
         var saveTimeBound = currentTime + slashTime * 30 / 41;

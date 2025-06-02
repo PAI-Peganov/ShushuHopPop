@@ -79,7 +79,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
         else if (character.IsMoving)
         {
             character.SetNotIsMoving();
-            StartCoroutine(CorotineEnumerator(Time.deltaTime * 5,
+            StartCoroutine(CorotineEnumerator(0.05f,
                 () =>
                 {
                     if (!character.IsMoving)
@@ -117,7 +117,6 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
         if (character.IsMoving || character.IsDashing)
         {
             transform.position += moveDirection * entityMoveSpeed * Time.deltaTime;
-            WorldManager.UpdatePlayerLocation(transform.position);
         }
     }
 
