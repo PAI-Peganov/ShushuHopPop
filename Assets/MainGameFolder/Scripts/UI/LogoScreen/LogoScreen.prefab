@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7021357505057661026}
   - component: {fileID: 3227721614779155053}
   - component: {fileID: 9020653985593822710}
+  - component: {fileID: 8514523975278198221}
   m_Layer: 5
   m_Name: LogoScreen
   m_TagString: Untagged
@@ -116,7 +117,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: dc3fea47115bbcb449efbf6c3d8870d2, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -126,6 +127,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8514523975278198221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771263836139310578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dad2b7d66fe8c044a85132ab977769b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1694313743283329454
 GameObject:
   m_ObjectHideFlags: 0
