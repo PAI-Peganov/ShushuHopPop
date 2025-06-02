@@ -1,4 +1,4 @@
-using ItemBase;
+using MainGameFolder.Scripts.UI.Quest;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,18 +22,13 @@ namespace EntityBase
             WorldManager.UpdatePlayerLocation(transform.position);
         }
 
-        public void InteractWith(Item entity)
-        {
-
-        }
-
         public new void TakeDamage(float damage)
         {
             base.TakeDamage(damage);
             if (healthPoints <= 0)
             {
-                ASCaster.PlaySoundByName("MonsterDeath");
-                ASCaster.PlayAnimationByName("MonsterDeath");
+                ASCaster.PlaySoundByName("PlayerDeath");
+                ASCaster.PlayAnimationByName("PlayerDeath");
                 gameObject.SetActive(false);
             }
         }
