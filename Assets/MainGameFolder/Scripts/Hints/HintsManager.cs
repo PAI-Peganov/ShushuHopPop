@@ -16,7 +16,6 @@ namespace MainGameFolder.Scripts.Hints
         {
             if (other.CompareTag("Player"))
             {
-                Debug.Log("1111");
                 hintUI.gameObject.SetActive(true);
             }
         }
