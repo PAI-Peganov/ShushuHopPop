@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using EntityBase;
+using MainGameFolder.Scripts.UI.QuestsWindow;
 
 public static class WorldManager
 {
@@ -9,12 +10,19 @@ public static class WorldManager
     public static List<Vector2> HalfCellMoveVectors { get; private set; }
     public static Vector3 PlayerStart { get; private set; }
     public static Vector3 PlayerPosition { get; private set; }
+    
+    private static QuestListManager _questListManager;
 
     public static void AddNewMap(Map map)
     {
         Map = map;
         MakeMoveVectors();
         PlayerStart = Map.GetGridPositionByGridCords(Map.GetPlayerStart);
+    }
+
+    public static void AddQuestListManager(QuestListManager questListManager)
+    {
+        _questListManager = questListManager;
     }
 
     private static void MakeMoveVectors()
@@ -44,4 +52,14 @@ public static class WorldManager
 
     public static Vector3 GetWorldPositionFromCell(Vector2Int cell) =>
         Map.GetGridPositionByGridCords(new Vector3Int(cell.x, cell.y));
+
+    public static void CompleteQuest(string name)
+    {
+        if (name is null)
+        {
+            Debug.LogError("Quest name is null");
+            return;
+        }
+        _questListManager.TryMarkQuestAsCompleted(name);
+    }
 }
