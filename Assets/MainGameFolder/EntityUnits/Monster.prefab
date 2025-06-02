@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3246545663368579197}
   - component: {fileID: 5069704170373026165}
   - component: {fileID: 4815843483175846054}
+  - component: {fileID: 5883331013727912599}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Enemy
@@ -283,3 +284,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5883331013727912599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645366703141890134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab04cfc6edb56de47b975f5563637576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 4204507041350615173, guid: 070d3f807762d534aa7d7f10af3b357d, type: 3}
