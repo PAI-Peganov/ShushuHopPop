@@ -11,10 +11,13 @@ public class AnimationsSoundsCaster : MonoBehaviour
     private Entity entity;
     private AnimationClip currentClip;
     private AnimationClip nextStanding;
+    private AnimationClip nextAttack;
     [SerializeField] private float movingAnimationSpeed;
     [SerializeField] private float standingAnimationSpeed;
+    [SerializeField] private float attackingAnimationSpeed;
     [SerializeField] private AnimationClip[] AnimatedSpritesWalk;
     [SerializeField] private AnimationClip[] AnimatedSpritesStand;
+    [SerializeField] private AnimationClip[] AnimatedSpritesAttack;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] namedSounds;
     [SerializeField] private AnimationClip[] namedAnimations;
@@ -46,7 +49,8 @@ public class AnimationsSoundsCaster : MonoBehaviour
     private void SetSpriteWalkingByDirections(IEnumerable<Vector2> directions, Vector2 moveDirection, bool hard)
     {
         var sprites = directions.Zip(
-            AnimatedSpritesWalk.Zip(AnimatedSpritesStand, (Walk, Stand) => (Walk, Stand)),
+            AnimatedSpritesWalk.Zip(AnimatedSpritesStand, (Walk, Stand) => (Walk, Stand))
+                .Zip(AnimatedSpritesAttack, (sprites, Attack) => (sprites.Walk, sprites.Stand, Attack)),
             (vector, sprites) => (vector, sprites))
             .OrderBy(x => (x.vector + moveDirection).magnitude)
             .Last()
@@ -56,6 +60,7 @@ public class AnimationsSoundsCaster : MonoBehaviour
             currentClip = sprites.Walk;
             animator.Play(sprites.Walk.name);
             nextStanding = sprites.Stand;
+            nextAttack = sprites.Attack;
         }
         animator.speed = movingAnimationSpeed * entity.MoveSpeed;
     }
@@ -70,6 +75,13 @@ public class AnimationsSoundsCaster : MonoBehaviour
         currentClip = nextStanding;
         animator.Play(nextStanding.name);
         animator.speed = standingAnimationSpeed;
+    }
+
+    public void SetSpriteAttack()
+    {
+        currentClip = nextAttack;
+        animator.Play(nextAttack.name);
+        animator.speed = attackingAnimationSpeed;
     }
 
     public void OpenEyes()

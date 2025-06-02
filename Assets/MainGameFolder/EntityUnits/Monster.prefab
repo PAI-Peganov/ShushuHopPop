@@ -36,7 +36,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.44, y: 3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: -639357635
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -4209461767521648114, guid: 2999188c790cb784b9ee318979c17819, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &3941664426721627709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,18 +110,16 @@ MonoBehaviour:
   maxHealthPoints: 100
   healthPoints: 100
   defaultMoveTimeout: 0.05
-  defaultMoveSpeed: 1
-  dashPrepaireTime: 0.7
-  dashSpeed: 3
+  defaultMoveSpeed: 0.8
+  dashPrepaireTime: 0.1
+  dashSpeed: 2
   dashDistance: 2
   dashCalldownTime: 3
   defaultDamage: 20
   defaultResistanse: 0
   id: monster
-  startCell: {x: 1, y: 1}
-  attackCalldown: 0
-  attackedCalldown: 0
-  ASCaster: {fileID: 0}
+  attackCalldown: 2
+  attackedCalldown: 3
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,11 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb61fd9405bda4c9ec7dff5b5c603d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  homeCell: {x: -3, y: -8}
-  homeDefendingRadius: 1.5
-  playerDetectingRadius: 1.5
-  targetSwitchTime: 1
-  targetSwitchTimeDelta: 0.1
+  playerKeepingRadius: 2.5
+  playerDetectingRadius: 4.5
+  homeRadius: 2
+  targetSwitchTime: 0.5
+  targetSwitchTimeDelta: 0.02
 --- !u!114 &9149619482271005493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,24 +163,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingAnimationSpeed: 0.3
   standingAnimationSpeed: 0.3
+  attackingAnimationSpeed: 0.3
   AnimatedSpritesWalk:
-  - {fileID: 7400000, guid: 4ec26290fa829c345ab334e454027a5a, type: 2}
-  - {fileID: 7400000, guid: a1b370dd104a84f40a04df611111603a, type: 2}
-  - {fileID: 7400000, guid: 3de254d35bc7e494799b8edfa30cf0da, type: 2}
-  - {fileID: 7400000, guid: c0a241d25a3247341a730347b292aa30, type: 2}
-  - {fileID: 7400000, guid: c16edda7bc185f84fb7c435565a8fae0, type: 2}
-  - {fileID: 7400000, guid: b4a265c4d8d39f34dbf1d2bf1db4f757, type: 2}
-  - {fileID: 7400000, guid: 4c660afc1c5adb74c8dc242ea5190590, type: 2}
-  - {fileID: 7400000, guid: d3534fd90d8c59045bd2379e6b2c66de, type: 2}
+  - {fileID: 7400000, guid: b48a1c8df84f6934291ae313b49dde61, type: 2}
+  - {fileID: 7400000, guid: 7cbd026c29d83b64cbb6e2dc8c441acc, type: 2}
+  - {fileID: 7400000, guid: 42e960faee897b74894738ec5606745f, type: 2}
+  - {fileID: 7400000, guid: 59ca653ba9252b942b8ef3a390d10c07, type: 2}
+  - {fileID: 7400000, guid: cea2a515386e96d4f8cbed8d5b8d6552, type: 2}
+  - {fileID: 7400000, guid: 3099b63954a685e4e83cde1867d604c6, type: 2}
+  - {fileID: 7400000, guid: 964879cdc0d5edf438d88153af7048e5, type: 2}
+  - {fileID: 7400000, guid: 45ec6eee36d038540bf7ed92363134ce, type: 2}
   AnimatedSpritesStand:
-  - {fileID: 7400000, guid: 9525eef863bd29148841884eb1fa81d7, type: 2}
-  - {fileID: 7400000, guid: d2308e366b20a234daf99bbe56aea3c8, type: 2}
-  - {fileID: 7400000, guid: 1a4fd28c17c8dd44da41c01e3c61751e, type: 2}
-  - {fileID: 7400000, guid: 4906daf3aac5c304e8a6ace7b858770f, type: 2}
-  - {fileID: 7400000, guid: fcdfe4e192c595b48b8d92f33b0a7517, type: 2}
-  - {fileID: 7400000, guid: bbd0ccfbcf79acf42a6df25a68190d9f, type: 2}
-  - {fileID: 7400000, guid: c411561ecfc4f0a4c90b14a6d3afb677, type: 2}
-  - {fileID: 7400000, guid: cc4c7474743459e49a9b62a9c1957546, type: 2}
+  - {fileID: 7400000, guid: 4b266a63acbf4094581cce63f0c51224, type: 2}
+  - {fileID: 7400000, guid: 941d52af89d1dfa42a18a8458a046df5, type: 2}
+  - {fileID: 7400000, guid: f3efede2de6427f44a77222f472e900c, type: 2}
+  - {fileID: 7400000, guid: cd182b217d629dc4db066b615b235756, type: 2}
+  - {fileID: 7400000, guid: 8cd8b7e8d5f6c0c499d8c16e7c0ae1cf, type: 2}
+  - {fileID: 7400000, guid: 2858b7e0859fe734fa184cae98d4bc94, type: 2}
+  - {fileID: 7400000, guid: 2a3d34101326d774b8656bea042782f0, type: 2}
+  - {fileID: 7400000, guid: 7987c27997f14e74793225414db38d22, type: 2}
+  AnimatedSpritesAttack:
+  - {fileID: 7400000, guid: e1293c4ca10d9b341a17ccef1a927b17, type: 2}
+  - {fileID: 7400000, guid: 7db8bda6c695eb7439033f6c9ed36117, type: 2}
+  - {fileID: 7400000, guid: 10fca5bb20e33d94baf22b5097b2fe27, type: 2}
+  - {fileID: 7400000, guid: ca747fc9364c9c24fb8c82d6e01b6f9e, type: 2}
+  - {fileID: 7400000, guid: 510fcdee8deb6ee4e96f6d09ac73f014, type: 2}
+  - {fileID: 7400000, guid: cc27df36566e8b1409f0255de1515165, type: 2}
+  - {fileID: 7400000, guid: c2f250ae7a29ac84fa84d062937807ce, type: 2}
+  - {fileID: 7400000, guid: bb474234aba38ae4889fa5d994558b12, type: 2}
   audioSource: {fileID: 0}
   namedSounds: []
   namedAnimations: []
@@ -221,7 +229,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!50 &3246545663368579197
 Rigidbody2D:
   serializedVersion: 5
@@ -234,7 +242,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10000
+  m_Mass: 70
   m_LinearDamping: 0
   m_AngularDamping: 0.03
   m_GravityScale: 0
@@ -271,7 +279,7 @@ Animator:
   m_GameObject: {fileID: 4645366703141890134}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 258e8ecf27ec0394a880e58dee7ffc9f, type: 2}
+  m_Controller: {fileID: 9100000, guid: f9156c60f9363044ca09ca94dd8f7241, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

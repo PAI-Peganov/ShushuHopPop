@@ -93,7 +93,6 @@ public class CharacterMotorCellDependent : MonoBehaviour, ICharacterMotor
                         (aimMovePosition - startMovePosition).x,
                         (aimMovePosition - startMovePosition).y));
                 }
-                WorldManager.UpdatePlayerLocation(aimMovePosition);
             }
             else
             {

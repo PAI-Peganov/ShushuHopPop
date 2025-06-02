@@ -20,14 +20,13 @@ namespace EntityBase
         [SerializeField] protected float defaultResistanse;
 
         [SerializeField] protected string id;
-        [SerializeField] protected Vector2Int startCell;
 
         public string Id => id;
-        public Vector2Int StartCell => startCell;
-        public Vector3 StartPosition => WorldManager.GetWorldPositionFromCell(StartCell);
+        public int HealthPoints => healthPoints;
+        public Vector3 StartPosition { get; private set; }
         public float MoveTimeout { private set; get; }
         public float MoveSpeed { protected set; get; }
-        public float DashDistance => dashDistance;
+        public float DashDistance { protected set; get; }
         public float DashPrepaireTime => dashPrepaireTime;
         public float DashSpeed => dashSpeed;
         public float DashCalldownTime => dashCalldownTime;
@@ -41,9 +40,11 @@ namespace EntityBase
         {
             MoveTimeout = defaultMoveTimeout;
             MoveSpeed = defaultMoveSpeed;
+            DashDistance = dashDistance;
             IsMoving = false;
             IsDashing = false;
             IsWaiting = false;
+            StartPosition = transform.position;
         }
 
         // Update is called once per frame

@@ -7,6 +7,8 @@ namespace MainGameFolder.Scripts.UI.Quest
         public int Order { get; private set; }
         public bool IsDone { get; private set; }
 
+        private float progres = 0f;
+
         public QuestTask(string questText, int order)
         {
             QuestText = questText;
@@ -16,6 +18,11 @@ namespace MainGameFolder.Scripts.UI.Quest
         public void MakeDone()
         {
             IsDone = true;
+        }
+
+        public void UpdateProgres()
+        {
+
         }
     }
 }

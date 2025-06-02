@@ -7,7 +7,7 @@ public class Monster : Entity
     [SerializeField] private float attackCalldown;
     [SerializeField] private float attackedCalldown;
 
-    [SerializeField] private AnimationsSoundsCaster ASCaster;
+    public AnimationsSoundsCaster ASCaster { get; private set; }
     private float canAttackMoment;
 
     public bool IsAttacking { get; private set; } = false;
@@ -15,6 +15,7 @@ public class Monster : Entity
     new void Awake()
     {
         base.Awake();
+        DashDistance = dashDistance;
         ASCaster = GetComponent<AnimationsSoundsCaster>();
         canAttackMoment = 0f;
     }
@@ -29,9 +30,19 @@ public class Monster : Entity
         if (!IsAttacking && CanAttack)
         {
             IsAttacking = true;
+            SetIsWaiting();
             return true;
         }
         return false;
+    }
+
+    public new bool TrySetIsDashing()
+    {
+        DashDistance = Mathf.Clamp(
+            Vector3.Distance(WorldManager.PlayerPosition, transform.position) - 0.3f,
+            0f,
+            dashDistance);
+        return base.TrySetIsDashing();
     }
 
     public new float AttackDamage
@@ -42,6 +53,9 @@ public class Monster : Entity
             {
                 canAttackMoment = Time.time + attackCalldown;
                 IsAttacking = false;
+                SetIsWaiting();
+                ASCaster.SetSpriteAttack();
+                StartCoroutine(SetCoroutine(SetIsNotWaiting, 1f));
                 return base.AttackDamage;
             }
             return 0f;
@@ -53,14 +67,14 @@ public class Monster : Entity
         base.TakeDamage(damage);
         IsAttacking = false;
         canAttackMoment = Time.time + attackedCalldown;
+        SetIsWaiting();
         if (healthPoints <= 0)
         {
             ASCaster.PlaySoundByName("MonsterDeath");
             ASCaster.PlayAnimationByName("MonsterDeath");
-            gameObject.SetActive(false);
+            StartCoroutine(SetCoroutine(() => gameObject.SetActive(false), 1f));
             return;
         }
-        SetIsWaiting();
         StartCoroutine(SetCoroutine(SetIsNotWaiting, attackedCalldown));
     }
 }

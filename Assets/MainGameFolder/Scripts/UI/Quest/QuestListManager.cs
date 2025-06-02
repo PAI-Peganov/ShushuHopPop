@@ -46,6 +46,11 @@ namespace MainGameFolder.Scripts.UI.Quest
             }
         }
 
+        private void FixedUpdate()
+        {
+            
+        }
+
         private static string InsertLineBreaks(string input, int maxLineLength = 50)
         {
             var lastBreak = 0;
