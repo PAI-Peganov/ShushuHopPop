@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 namespace EntityBase
@@ -51,7 +52,10 @@ namespace EntityBase
         {
 
         }
-
+        public float GetHealthPercent()
+        {
+            return healthPoints * 1f / maxHealthPoints;
+        }
         public void TakeDamage(float damage)
         {
             healthPoints -= (int)damage;

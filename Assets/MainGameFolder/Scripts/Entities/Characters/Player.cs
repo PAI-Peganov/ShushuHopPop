@@ -1,3 +1,4 @@
+using MainGameFolder.Scripts.UI.PauseMenu;
 using MainGameFolder.Scripts.UI.Quest;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,11 +22,18 @@ namespace EntityBase
         {
             WorldManager.UpdatePlayerLocation(transform.position);
         }
+        private void Update()
+        {
+            if (healthPoints <= 0)
+            {
+                GameOverMenuManager.Instance.OverGame();
+            }
+        }
 
         public new void TakeDamage(float damage)
         {
             base.TakeDamage(damage);
-            if (healthPoints <= 0)
+            if (healthPoints <= 0) 
             {
                 ASCaster.PlaySoundByName("PlayerDeath");
                 ASCaster.PlayAnimationByName("PlayerDeath");
