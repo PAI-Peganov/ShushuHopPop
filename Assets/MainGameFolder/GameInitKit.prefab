@@ -291,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8624038861322412280, guid: e70876fda2a06434f9e273fa991c8554, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -477.77997
+      value: -477.78
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -438,10 +438,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2640218930017112958}
     - target: {fileID: -5336218688890820070, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
-      propertyPath: slashTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -5336218688890820070, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
       propertyPath: fightUICanvas
       value: 
       objectReference: {fileID: 589114627066932949}
@@ -516,8 +512,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886808068515722137}
   m_SourcePrefab: {fileID: 100100000, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
+--- !u!1 &2740767072721559708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
+  m_PrefabInstance: {fileID: 2162035131826086346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886808068515722137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740767072721559708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab04cfc6edb56de47b975f5563637576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 4204507041350615173, guid: 070d3f807762d534aa7d7f10af3b357d, type: 3}
 --- !u!4 &3752832137118127353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3032518547708327219, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
@@ -545,15 +562,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5871907729806718108, guid: bb64ae4f836e64943af5c0f8671bd337, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1092
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5871907729806718108, guid: bb64ae4f836e64943af5c0f8671bd337, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 0.000061035
       objectReference: {fileID: 0}
     - target: {fileID: 5871907729806718108, guid: bb64ae4f836e64943af5c0f8671bd337, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.1501975
+      value: -0.000049591
       objectReference: {fileID: 0}
     - target: {fileID: 7740307449838106504, guid: bb64ae4f836e64943af5c0f8671bd337, type: 3}
       propertyPath: m_Pivot.x

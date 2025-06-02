@@ -29,7 +29,6 @@ public class PlayerInteractions : MonoBehaviour
                     if (lighter.lightType == Light2D.LightType.Global)
                         lighter.intensity = 0.0001f;
                 }
-
                 break;
             default:
                 break;
@@ -52,7 +51,6 @@ public class PlayerInteractions : MonoBehaviour
                     foreach (var questName in collision.gameObject.GetComponent<Item>().QuestsNames)
                         WorldManager.CompleteQuest(questName);
                 }
-
                 break;
             default:
                 break;

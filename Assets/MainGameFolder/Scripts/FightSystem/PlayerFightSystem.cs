@@ -17,11 +17,11 @@ public class PlayerFightSystem : MonoBehaviour
     private PlayerController controller;
     private AnimationsSoundsCaster caster;
     private int isQTERunning = 0;
-    private int currentQTENum = 0;
+    private int currentQTENum = -1;
     private int countQTE = 0;
 
     private float currentTime => Time.time;
-    
+
     void Awake()
     {
         player = GetComponent<Player>();
@@ -41,6 +41,8 @@ public class PlayerFightSystem : MonoBehaviour
         //if (keys.TryPeek(out var key))
         //    textNextKey.SetText(key.ToString());
     }
+
+    public void PerformNextQTE() => currentQTENum++;
 
     public void StartFightMonster(Monster monster)
     {
@@ -80,7 +82,7 @@ public class PlayerFightSystem : MonoBehaviour
             if (currentTime > saveTimeBound)
                 spriteRenderer.color = new Color(1f, 0f, 0f, 1f);
             current.transform.localScale -= Vector3.one * 30 * (Time.deltaTime / slashTime);
-            if (currentQTENum == number && controller.AttackButtonClicked)
+            if (currentQTENum == number)
             {
                 if (currentTime < saveTimeBound)
                 {
@@ -96,7 +98,6 @@ public class PlayerFightSystem : MonoBehaviour
             }
             yield return null;
         }
-        currentQTENum++;
         if (currentTime > endBound)
         {
             caster.PlaySoundByName("TakeDamage");

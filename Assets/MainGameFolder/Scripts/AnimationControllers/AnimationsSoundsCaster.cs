@@ -9,7 +9,7 @@ public class AnimationsSoundsCaster : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Animator animator;
     private Entity entity;
-    private AnimationClip currentClip;
+    private string currentClipName;
     private AnimationClip nextStanding;
     private AnimationClip nextAttack;
     [SerializeField] private float movingAnimationSpeed;
@@ -55,9 +55,9 @@ public class AnimationsSoundsCaster : MonoBehaviour
             .OrderBy(x => (x.vector + moveDirection).magnitude)
             .Last()
             .sprites;
-        if (hard || currentClip.name != sprites.Walk.name)
+        if (hard || currentClipName != sprites.Walk.name)
         {
-            currentClip = sprites.Walk;
+            currentClipName = sprites.Walk.name;
             animator.Play(sprites.Walk.name);
             nextStanding = sprites.Stand;
             nextAttack = sprites.Attack;
@@ -72,14 +72,14 @@ public class AnimationsSoundsCaster : MonoBehaviour
 
     public void SetSpriteStanding()
     {
-        currentClip = nextStanding;
+        currentClipName = nextStanding.name;
         animator.Play(nextStanding.name);
         animator.speed = standingAnimationSpeed;
     }
 
     public void SetSpriteAttack()
     {
-        currentClip = nextAttack;
+        currentClipName = nextAttack.name;
         animator.Play(nextAttack.name);
         animator.speed = attackingAnimationSpeed;
     }
@@ -106,8 +106,10 @@ public class AnimationsSoundsCaster : MonoBehaviour
             audioSource.PlayOneShot(soundShot);
     }
 
-    public void PlayAnimationByName(string name)
+    public void PlayAnimationByName(string name, float speed=1f)
     {
+        currentClipName = name;
         animator.Play(name);
+        animator.speed = speed;
     }
 }

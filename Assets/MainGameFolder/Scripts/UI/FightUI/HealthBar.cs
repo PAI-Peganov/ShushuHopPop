@@ -7,11 +7,11 @@ public class HealthBar : MonoBehaviour
 {
     private float healthPercent = 0.1f;
 
-    [SerializeField]
-    private GameObject healthBarPrefab;
+    [SerializeField] private GameObject healthBarPrefab;
     private GameObject healthBar;
     private float lengthMultiplier = 1f;
     private float heightMultiplier = 0.08f;
+    private Func<bool> changeBarVisibility;
 
     private Entity entity;
     private void Update()
@@ -19,6 +19,8 @@ public class HealthBar : MonoBehaviour
         healthPercent = entity.GetHealthPercent();
         if (healthBar != null)
         {
+            healthBar.SetActive(changeBarVisibility());
+
             healthBar.transform.position = transform.position + new Vector3(0, 0.8f, 0);
             var maxHealth = healthBar.transform.GetChild(0);
             var maxHealthScale = maxHealth.transform.localScale;
@@ -46,6 +48,7 @@ public class HealthBar : MonoBehaviour
             entity = player;
             healthBar = Instantiate(healthBarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             healthBar.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 255, 0, 144);
+            changeBarVisibility = () => true;
             return;
         }
 
@@ -55,6 +58,7 @@ public class HealthBar : MonoBehaviour
             entity = monster;
             healthBar = Instantiate(healthBarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             healthBar.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 144);
+            changeBarVisibility = () => monster.IsSeeingPlayer;
             return;
         }
     }

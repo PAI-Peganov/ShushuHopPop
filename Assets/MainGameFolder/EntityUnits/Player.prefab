@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b254ff476231b4f87b611e44bd7017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questListManager: {fileID: 0}
 --- !u!114 &-5336218688890820070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +176,7 @@ MonoBehaviour:
   fightUI: {fileID: 0}
   circleAtack: {fileID: 7127467734836471489, guid: 5756a3182e04cb2409d1b63c608629e6, type: 3}
   initTime: 0.5
-  slashTime: 0.5
+  slashTime: 1
 --- !u!58 &2597503520230221437
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -113,14 +113,15 @@ MonoBehaviour:
   defaultMoveTimeout: 0.05
   defaultMoveSpeed: 0.8
   dashPrepaireTime: 0.1
-  dashSpeed: 2
-  dashDistance: 2
+  dashSpeed: 3
+  dashDistance: 2.7
   dashCalldownTime: 3
   defaultDamage: 20
   defaultResistanse: 0
   id: monster
   attackCalldown: 2
   attackedCalldown: 3
+  IsSeeingPlayer: 0
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb61fd9405bda4c9ec7dff5b5c603d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKeepingRadius: 2.5
-  playerDetectingRadius: 4.5
+  playerKeepingRadius: 2
+  playerDetectingRadius: 3.5
   homeRadius: 2
   targetSwitchTime: 0.5
   targetSwitchTimeDelta: 0.02

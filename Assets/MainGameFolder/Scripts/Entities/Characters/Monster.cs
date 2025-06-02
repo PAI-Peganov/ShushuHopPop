@@ -1,4 +1,5 @@
 using EntityBase;
+using MainGameFolder.Scripts.UI.QuestsWindow;
 using System.Linq;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class Monster : Entity
     private float canAttackMoment;
 
     public bool IsAttacking { get; private set; } = false;
+    public bool IsSeeingPlayer = false;
 
     new void Awake()
     {
@@ -70,6 +72,9 @@ public class Monster : Entity
         SetIsWaiting();
         if (healthPoints <= 0)
         {
+            if (TryGetComponent<Item>(out var taskItem))
+                foreach (var questName in taskItem.QuestsNames)
+                    WorldManager.CompleteQuest(questName);
             ASCaster.PlaySoundByName("MonsterDeath");
             ASCaster.PlayAnimationByName("MonsterDeath");
             StartCoroutine(SetCoroutine(() => gameObject.SetActive(false), 1f));

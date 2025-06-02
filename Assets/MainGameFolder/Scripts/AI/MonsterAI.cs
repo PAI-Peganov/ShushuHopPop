@@ -44,9 +44,9 @@ public class MonsterAI : MonoBehaviour
             if (distanceToPlayer < playerDetectingRadius)
             {
                 animator.OpenEyes();
+                monster.IsSeeingPlayer = true;
                 targetPosition = WorldManager.PlayerPosition;
                 homePosition = targetPosition;
-                Debug.Log(WorldManager.PlayerPosition);
                 if (distanceToPlayer < playerKeepingRadius)
                     if (characterMotor.TryCallCharacterDash())
                         animator.FlashEyesDuration(monster.DashPrepaireTime);
@@ -55,6 +55,7 @@ public class MonsterAI : MonoBehaviour
             else
             {
                 animator.CloseEyes();
+                monster.IsSeeingPlayer = false;
                 targetPosition = CalculateNextTargetPosition();
                 yield return new WaitForSeconds(Random.Range(
                     targetSwitchTime - targetSwitchTimeDelta,

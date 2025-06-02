@@ -11,20 +11,13 @@ public class Player : Entity
     {
         base.Awake();
         inputManager = GetComponent<PlayerController>();
+        ASCaster = GetComponent<AnimationsSoundsCaster>();
     }
 
-        // Update is called once per frame
-        void FixedUpdate()
-        {
-            WorldManager.UpdatePlayerLocation(transform.position);
-        }
-        private void Update()
-        {
-            if (healthPoints <= 0)
-            {
-                GameOverMenuManager.Instance.OverGame();
-            }
-        }
+    void FixedUpdate()
+    {
+        WorldManager.UpdatePlayerLocation(transform.position);
+    }
 
     public new void TakeDamage(float damage)
     {
@@ -33,7 +26,13 @@ public class Player : Entity
         {
             ASCaster.PlaySoundByName("PlayerDeath");
             ASCaster.PlayAnimationByName("PlayerDeath");
-            gameObject.SetActive(false);
+            inputManager.enabled = false;
+            StartCoroutine(SetCoroutine(() =>
+            {
+                gameObject.SetActive(false);
+                GameOverMenuManager.Instance.OverGame();
+            },
+            0.5f));
         }
     }
 }

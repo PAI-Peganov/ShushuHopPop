@@ -71,6 +71,5 @@ public static class WorldManager
 
         if (_questListManager.TryMarkQuestAsCompleted(name, out var task))
             _subtitlesController.PlaySubtiles(task.Name);
-        
     }
 }

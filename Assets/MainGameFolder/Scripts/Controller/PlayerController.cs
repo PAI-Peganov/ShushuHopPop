@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private bool isCellDependent;
     private PlayerInput playerInput;
     private PlayerInput.PlayerActions playerActions;
+    private PlayerFightSystem fightSystem;
     private ICharacterMotor playerMotor;
 
     public bool AttackButtonClicked => playerActions.Attack.IsPressed();
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
             playerMotor = GetComponent<CharacterMotorCellDependent>();
         else
             playerMotor = GetComponent<CharacterMotorIndependent>();
+        fightSystem = GetComponent<PlayerFightSystem>();
+        playerActions.Attack.performed += ctx => fightSystem.PerformNextQTE();
     }
 
     private void OnEnable()

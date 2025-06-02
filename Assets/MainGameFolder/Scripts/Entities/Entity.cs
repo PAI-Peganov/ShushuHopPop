@@ -46,6 +46,7 @@ namespace EntityBase
             IsDashing = false;
             IsWaiting = false;
             StartPosition = transform.position;
+            healthPoints = Math.Clamp(healthPoints, 0, maxHealthPoints);
         }
 
         // Update is called once per frame
