@@ -98,12 +98,12 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
 
         private bool TryShowNextQuest()
         {
-            QuestTask nextQuest = null;
+            (QuestTask task, GameObject gameObject) nextQuest = (null, null);
             foreach (var quest in _quests)
             {
                 if (!quest.Value.task.IsDone)
                 {
-                    nextQuest = quest.Value.task;
+                    nextQuest = quest.Value;
                     break;
                 }
 
@@ -111,10 +111,10 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
                     quest.Value.gameObject.SetActive(true);
             }
 
-            nextQuest?.gameObject.SetActive(true);
+            nextQuest.gameObject?.SetActive(true);
             ShowQuestUI();
             
-            return nextQuest is not null;
+            return nextQuest.task is not null;
         }
 
         private void ClearQuests()
