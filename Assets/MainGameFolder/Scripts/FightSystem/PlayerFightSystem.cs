@@ -86,7 +86,7 @@ public class PlayerFightSystem : MonoBehaviour
             {
                 if (currentTime < saveTimeBound)
                 {
-                    caster.PlaySoundByName("BlockAtack");
+                    caster.PlaySoundByName("BlockAttack");
                     player.TakeDamage(monster.AttackDamage * (1 - player.Resistance));
                 }
                 else
