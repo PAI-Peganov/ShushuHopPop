@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -16,29 +17,27 @@ namespace MainGameFolder.Scripts.UI.MainMenu
         [SerializeField]
         private Canvas History;
 
-        private int historyLabel = 0;
+        private int historyLabel = -1;
 
         // Starts the game from saved state
         public void Play()
         { 
-            historyLabel = 1;
+            historyLabel = 0;            
         }
 
         void Update()
         {
 
-            History.enabled = (historyLabel == 1);
-            
+            History.enabled = (historyLabel != -1);
+            var comp = History.GetComponentsInChildren<TextMeshProUGUI>();
+            for (var i = 0; i < comp.Length; i++)
+                comp[i].enabled = i == historyLabel;
 
-            if (historyLabel > 0 && Input.GetKeyDown(KeyCode.Mouse0))
-            {
+            if (historyLabel >= 0 && Input.GetKeyDown(KeyCode.Mouse0))
                 historyLabel += 1;
-            }
 
-            if (historyLabel == 2)
-            {
+            if (historyLabel == 6)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
         }
         //TODO:
         // Enables settings scene
