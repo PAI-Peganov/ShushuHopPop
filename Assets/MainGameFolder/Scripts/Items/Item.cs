@@ -2,6 +2,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] public int[] QuestsNumbers;
+    [SerializeField] public string[] QuestsNames;
     [SerializeField] public string InteractionSoundName;
 }

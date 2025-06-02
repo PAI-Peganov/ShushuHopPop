@@ -1,11 +1,9 @@
 using EntityBase;
-using MainGameFolder.Scripts.UI.Quest;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    [SerializeField] private QuestListManager questListManager;
     private PlayerFightSystem fightSystem;
     private Player player;
     private PlayerController playerController;
@@ -31,6 +29,7 @@ public class PlayerInteractions : MonoBehaviour
                     if (lighter.lightType == Light2D.LightType.Global)
                         lighter.intensity = 0.0001f;
                 }
+
                 break;
             default:
                 break;
@@ -50,9 +49,10 @@ public class PlayerInteractions : MonoBehaviour
                 if (playerController.InteractButtonClicked)
                 {
                     ASCaster.PlaySoundByName(collision.gameObject.GetComponent<Item>().InteractionSoundName);
-                    foreach (var num in collision.gameObject.GetComponent<Item>().QuestsNumbers)
-                        questListManager.TryMarkQuestAsCompleted(num);
+                    foreach (var questName in collision.gameObject.GetComponent<Item>().QuestsNames)
+                        WorldManager.CompleteQuest(questName);
                 }
+
                 break;
             default:
                 break;

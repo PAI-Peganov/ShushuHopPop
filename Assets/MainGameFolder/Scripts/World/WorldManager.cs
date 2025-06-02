@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using EntityBase;
@@ -57,7 +58,7 @@ public static class WorldManager
     {
         if (name is null)
         {
-            Debug.LogError("Quest name is null");
+            Debug.LogException(new Exception("Quest name is null"));
             return;
         }
         _questListManager.TryMarkQuestAsCompleted(name);

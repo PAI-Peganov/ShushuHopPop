@@ -1,7 +1,3 @@
-using MainGameFolder.Scripts.UI.Quest;
-using UnityEngine;
-using UnityEngine.InputSystem;
-
 namespace EntityBase
 {
     public class Player : Entity
