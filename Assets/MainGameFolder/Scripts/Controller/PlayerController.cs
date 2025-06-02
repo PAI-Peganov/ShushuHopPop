@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private ICharacterMotor playerMotor;
 
     public bool AttackButtonClicked => playerActions.Attack.IsPressed();
+    public bool InteractButtonClicked => playerActions.Interact.IsPressed();
 
     void Awake()
     {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace MainGameFolder.Scripts.UI.Quest
@@ -9,6 +10,7 @@ namespace MainGameFolder.Scripts.UI.Quest
     public class QuestListManager : MonoBehaviour
     {
         [SerializeField] private Canvas questCanvas;
+        [SerializeField] string nextSceneName;
 
         private readonly Dictionary<int, (QuestTask task, GameObject gameObject)> _quests = new();
 
@@ -98,14 +100,18 @@ namespace MainGameFolder.Scripts.UI.Quest
             _quests.Add(quest.Order, (quest, textObj));
         }
 
-        private void ShowNextQuest()
+        private bool TryShowNextQuest()
         {
             if (_currentQuest is null)
-                return;
+                return false;
             if (!_quests.TryGetValue(_currentQuest.Order + 1, out var quest))
+            {
+                return false;
                 throw new Exception("Quest not found: " + _currentQuest.Order + 1);
+            }
             quest.gameObject.SetActive(true);
             _currentQuest = quest.task;
+            return true;
         }
 
 
@@ -116,14 +122,29 @@ namespace MainGameFolder.Scripts.UI.Quest
             _quests.Clear();
         }
 
-        public void MarkQuestAsCompleted(int order)
+        public bool TryMarkQuestAsCompleted(int order)
         {
+            if (_currentQuest.Order != order)
+                return false;
             if (!_quests.TryGetValue(order, out var quest))
                 throw new Exception("Quest not found: " + order);
             quest.task.MakeDone();
             var text = quest.gameObject.GetComponent<Text>();
             text.text = Strikethrough(text.text);
-            ShowNextQuest();
+            if(!TryShowNextQuest())
+                TryLoadNextLevel();
+            return true;
+        }
+
+        public void TryLoadNextLevel()
+        {
+            StartCoroutine(NextLevelCoroutine());
+        }
+
+        private IEnumerator<WaitForSeconds> NextLevelCoroutine()
+        {
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(nextSceneName);
         }
 
         public void ShowQuestUI()
