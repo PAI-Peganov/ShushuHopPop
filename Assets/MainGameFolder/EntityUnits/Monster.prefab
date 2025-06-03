@@ -121,7 +121,7 @@ MonoBehaviour:
   defaultResistanse: 0
   id: monster
   attackCalldown: 2
-  attackedCalldown: 3
+  attackedCalldown: 1.5
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0

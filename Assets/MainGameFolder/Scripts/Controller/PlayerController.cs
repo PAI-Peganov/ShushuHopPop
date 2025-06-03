@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     private PlayerFightSystem fightSystem;
     private ICharacterMotor playerMotor;
 
-    public bool AttackButtonClicked => playerActions.Attack.IsPressed();
     public bool InteractButtonClicked => playerActions.Interact.IsPressed();
 
     void Awake()
@@ -21,7 +20,7 @@ public class PlayerController : MonoBehaviour
         else
             playerMotor = GetComponent<CharacterMotorIndependent>();
         fightSystem = GetComponent<PlayerFightSystem>();
-        playerActions.Attack.performed += ctx => fightSystem.PerformNextQTE();
+        playerActions.Attack.started += ctx => fightSystem.PerformNextQTE();
     }
 
     private void OnEnable()

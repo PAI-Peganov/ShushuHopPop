@@ -17,7 +17,7 @@ public class PlayerFightSystem : MonoBehaviour
     private PlayerController controller;
     private AnimationsSoundsCaster caster;
     private int isQTERunning = 0;
-    private int currentQTENum = -1;
+    private int currentQTENum = 0;
     private int countQTE = 0;
 
     private float CurrentTime => Time.time;
@@ -42,11 +42,15 @@ public class PlayerFightSystem : MonoBehaviour
         //    textNextKey.SetText(key.ToString());
     }
 
-    public void PerformNextQTE() => currentQTENum++;
+    public void PerformNextQTE()
+    {
+        if (currentQTENum < countQTE)
+            currentQTENum++;
+    }
 
     public void StartFightMonster(Monster monster)
     {
-        StartCoroutine(QTECoroutine(monster, countQTE++));
+        StartCoroutine(QTECoroutine(monster, ++countQTE));
     }
 
     private IEnumerator QTECoroutine(Monster monster, int number)
@@ -102,6 +106,7 @@ public class PlayerFightSystem : MonoBehaviour
             caster.PlaySoundByName("TakeDamage");
             player.TakeDamage(monster.AttackDamage);
         }
+        currentQTENum = number;
         Destroy(current);
         isQTERunning--;
         if (isQTERunning == 0)
