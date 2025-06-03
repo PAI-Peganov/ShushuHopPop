@@ -19,6 +19,12 @@ namespace MainGameFolder.Scripts.UI.MainMenu
 
         private int historyLabel = -1;
 
+        private void Awake()
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+
         // Starts the game from saved state
         public void Play()
         { 

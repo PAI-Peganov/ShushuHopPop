@@ -9,6 +9,7 @@ public class Monster : Entity
     [SerializeField] private float attackedCalldown;
 
     public AnimationsSoundsCaster ASCaster { get; private set; }
+    private CharacterMotorIndependent motor;
     private float canAttackMoment;
 
     public bool IsAttacking { get; private set; } = false;
@@ -19,6 +20,7 @@ public class Monster : Entity
         base.Awake();
         DashDistance = dashDistance;
         ASCaster = GetComponent<AnimationsSoundsCaster>();
+        motor = GetComponent<CharacterMotorIndependent>();
         canAttackMoment = 0f;
     }
 
@@ -75,6 +77,7 @@ public class Monster : Entity
             if (TryGetComponent<Item>(out var taskItem))
                 foreach (var questName in taskItem.QuestsNames)
                     WorldManager.CompleteQuest(questName);
+            motor.enabled = false;
             ASCaster.PlaySoundByName("MonsterDeath");
             ASCaster.PlayAnimationByName("MonsterDeath");
             StartCoroutine(SetCoroutine(() => gameObject.SetActive(false), 1f));

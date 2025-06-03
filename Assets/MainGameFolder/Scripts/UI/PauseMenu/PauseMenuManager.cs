@@ -12,6 +12,8 @@ namespace MainGameFolder.Scripts.UI.PauseMenu
         void Start()
         {
             pauseMenu.enabled = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         void Update()
@@ -28,6 +30,8 @@ namespace MainGameFolder.Scripts.UI.PauseMenu
         public void Pause()
         {
             pauseMenu.enabled = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             _isPaused = true;
             Time.timeScale = 0f;
         }
@@ -35,6 +39,8 @@ namespace MainGameFolder.Scripts.UI.PauseMenu
         public void Resume()
         {
             pauseMenu.enabled = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             _isPaused = false;
             Time.timeScale = 1f;
         }

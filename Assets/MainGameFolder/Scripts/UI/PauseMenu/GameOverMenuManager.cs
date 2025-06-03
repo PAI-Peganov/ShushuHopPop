@@ -27,6 +27,8 @@ namespace MainGameFolder.Scripts.UI.PauseMenu
         {
             Time.timeScale = 0f;
             gameOverMenu.enabled = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
         public void Resume()
         {

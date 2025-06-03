@@ -161,7 +161,10 @@ namespace MainGameFolder.Scripts.UI.QuestsWindow
         private IEnumerator<WaitForSeconds> NextLevelCoroutine()
         {
             yield return new WaitForSeconds(10);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (SceneManager.GetActiveScene().buildIndex < 3)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            else
+                GameObject.Find("HistoryManager").GetComponent<EndingManager>().Play();
         }
 
         private void ShowQuestUI()

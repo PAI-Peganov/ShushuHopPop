@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.7
+  bundleVersion: 1.0
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 76d3883997654c54cbc27bbbe26805b7, type: 3}
   metroInputSource: 0
@@ -597,7 +597,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: ShushuHopPop
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -605,7 +605,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: ShushuHopPop
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: LastDawn
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

@@ -106,8 +106,10 @@ public class PlayerFightSystem : MonoBehaviour
         Destroy(current);
         isQTERunning--;
         if (isQTERunning == 0)
+        {
             fightUI.SetActive(false);
-        player.SetIsNotWaiting();
+            player.SetIsNotWaiting();
+        }
         //keys.Dequeue();
     }
 }
