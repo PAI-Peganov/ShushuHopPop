@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e68c903be30e1394ab57ec99787e3130
+guid: 97f7ae51057be7b4b985e4d05c00e52f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6036146622879419313
-    second: Ellipse 2_0
+      213: -4942634134331380370
+    second: Elipse 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ellipse 2_0
+      name: Elipse 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f44391b90ac4b3ca0800000000000000
-      internalID: -6036146622879419313
+      spriteID: e6d2578217c386bb0800000000000000
+      internalID: -4942634134331380370
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fdbcd251cb53fa34f905d9245cfda17a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Ellipse 2_0: -6036146622879419313
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

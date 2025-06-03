@@ -37,9 +37,7 @@ public class CharacterMotorIndependent : MonoBehaviour, ICharacterMotor
     {
         lastStepMoment = 0f;
         lastDashMoment = 0f;
-        character = GetComponent<Monster>();
-        if (character == null)
-            character = GetComponent<Player>();
+        character = GetComponent<Entity>();
         animationsSwitcher = GetComponent<AnimationsSoundsCaster>();
     }
 

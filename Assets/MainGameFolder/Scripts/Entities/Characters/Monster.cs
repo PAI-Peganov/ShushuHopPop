@@ -13,7 +13,7 @@ public class Monster : Entity
     private float canAttackMoment;
 
     public bool IsAttacking { get; private set; } = false;
-    public bool IsSeeingPlayer = false;
+    public bool IsSeeingPlayer { get; set; } = false;
 
     new void Awake()
     {

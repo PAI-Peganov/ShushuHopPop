@@ -10,7 +10,6 @@ public class Player : Entity
     new void Awake()
     {
         base.Awake();
-        inputManager = GetComponent<PlayerController>();
         ASCaster = GetComponent<AnimationsSoundsCaster>();
     }
 
@@ -26,7 +25,6 @@ public class Player : Entity
         {
             ASCaster.PlaySoundByName("PlayerDeath");
             ASCaster.PlayAnimationByName("PlayerDeath");
-            inputManager.enabled = false;
             StartCoroutine(SetCoroutine(() =>
             {
                 gameObject.SetActive(false);

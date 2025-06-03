@@ -493,6 +493,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3506596165022255510, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
+      propertyPath: defaultMoveSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4037545643643715926, guid: a85383a9b250da84e892ae5b544ae994, type: 3}
       propertyPath: m_Name
       value: Player
@@ -674,6 +678,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 4019509540306653899}
+    - target: {fileID: 70377482315809183, guid: d9c9c462ca0cd00498925fd7c17b4a51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 70377482315809183, guid: d9c9c462ca0cd00498925fd7c17b4a51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 70377482315809183, guid: d9c9c462ca0cd00498925fd7c17b4a51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 81019287488242460, guid: d9c9c462ca0cd00498925fd7c17b4a51, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -112,7 +112,7 @@ MonoBehaviour:
   maxHealthPoints: 100
   healthPoints: 100
   defaultMoveTimeout: 0.05
-  defaultMoveSpeed: 0.8
+  defaultMoveSpeed: 1
   dashPrepaireTime: 0.1
   dashSpeed: 3
   dashDistance: 2.7
@@ -122,7 +122,6 @@ MonoBehaviour:
   id: monster
   attackCalldown: 2
   attackedCalldown: 3
-  IsSeeingPlayer: 0
 --- !u!114 &492708026016814812
 MonoBehaviour:
   m_ObjectHideFlags: 0

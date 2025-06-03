@@ -28,7 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1645474119
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 99
   m_Sprite: {fileID: -6036146622879419313, guid: e68c903be30e1394ab57ec99787e3130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

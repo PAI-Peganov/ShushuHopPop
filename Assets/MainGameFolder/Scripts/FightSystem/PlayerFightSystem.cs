@@ -20,7 +20,7 @@ public class PlayerFightSystem : MonoBehaviour
     private int currentQTENum = -1;
     private int countQTE = 0;
 
-    private float currentTime => Time.time;
+    private float CurrentTime => Time.time;
 
     void Awake()
     {
@@ -60,45 +60,44 @@ public class PlayerFightSystem : MonoBehaviour
         var current = Instantiate(circleAtack, fightUI.transform);
         var spriteRenderer = current.GetComponent<SpriteRenderer>();
         current.transform.localScale = Vector3.one * 40;
-        spriteRenderer.color = new Color(0.1f, 0.1f, 0.1f, 1f);
+        spriteRenderer.color = new Color(1f, 1f, 1f, 0.05f);
 
         yield return null;
-        var endBound = currentTime + initTime;
-        while (currentTime < endBound)
+        var endTimeBound = CurrentTime + initTime;
+        while (CurrentTime < endTimeBound)
         {
             current.transform.localScale -= Vector3.one * 10 * (Time.deltaTime / initTime);
             yield return null;
         }
 
         current.transform.localScale = Vector3.one * 30;
-        spriteRenderer.color = new Color(0f, 1f, 1f, 1f);
-        monster.ASCaster.SetSpriteAttack();
+        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
 
         yield return null;
-        var saveTimeBound = currentTime + slashTime * 30 / 41;
-        endBound = currentTime + slashTime;
-        while (currentTime < endBound)
+        endTimeBound = CurrentTime + slashTime;
+        var firstBound = (Vector3.one * 15.5f).magnitude;
+        var secondBound = (Vector3.one * 11f).magnitude;
+        while (CurrentTime < endTimeBound)
         {
-            if (currentTime > saveTimeBound)
-                spriteRenderer.color = new Color(1f, 0f, 0f, 1f);
             current.transform.localScale -= Vector3.one * 30 * (Time.deltaTime / slashTime);
             if (currentQTENum == number)
             {
-                if (currentTime < saveTimeBound)
-                {
-                    caster.PlaySoundByName("BlockAttack");
-                    player.TakeDamage(monster.AttackDamage * (1 - player.Resistance));
-                }
-                else
+                var circleValue = current.transform.localScale.magnitude;
+                if (firstBound >= circleValue && circleValue >= secondBound)
                 {
                     caster.PlaySoundByName("Parry");
                     monster.TakeDamage(player.AttackDamage);
+                    endTimeBound++;
+                }
+                else
+                {
+                    endTimeBound = 0f;
                 }
                 break;
             }
             yield return null;
         }
-        if (currentTime > endBound)
+        if (CurrentTime > endTimeBound)
         {
             caster.PlaySoundByName("TakeDamage");
             player.TakeDamage(monster.AttackDamage);
