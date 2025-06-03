@@ -18,9 +18,9 @@ public class AnimationsSoundsCaster : MonoBehaviour
     [SerializeField] private AnimationClip[] AnimatedSpritesWalk;
     [SerializeField] private AnimationClip[] AnimatedSpritesStand;
     [SerializeField] private AnimationClip[] AnimatedSpritesAttack;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip[] namedSounds;
     [SerializeField] private AnimationClip[] namedAnimations;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] clips;
     private readonly Vector2[] eightDirections = new Vector2[]
     {
         new Vector2(0.71f, 0.71f).normalized,
@@ -36,6 +36,7 @@ public class AnimationsSoundsCaster : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         entity = GetComponent<Entity>();
         SetSpriteWalkingByEightDirections(new Vector2(0, 1), true);
     }
@@ -99,17 +100,17 @@ public class AnimationsSoundsCaster : MonoBehaviour
 
     }
 
-    public void PlaySoundByName(string name)
-    {
-        var soundShot = namedSounds.FirstOrDefault(x => x.name == name);
-        if (soundShot != null)
-            audioSource.PlayOneShot(soundShot);
-    }
-
     public void PlayAnimationByName(string name, float speed=1f)
     {
         currentClipName = name;
         animator.Play(name);
         animator.speed = speed;
+    }
+
+    public void PlaySoundByName(string audioName)
+    {
+        var audioClip = clips.FirstOrDefault(x => x.name == audioName);
+        if (audioClip != null)
+            audioSource.PlayOneShot(audioClip);
     }
 }
